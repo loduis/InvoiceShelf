@@ -1,11 +1,11 @@
 import axios from 'axios'
+import { t, tc } from '@/scripts/i18n'
 import { defineStore } from 'pinia'
 import { useNotificationStore } from '@/scripts/stores/notification'
 import { handleError } from '@/scripts/helpers/error-handling'
 
 export const useItemStore = (useWindow = false) => {
   const defineStoreFunc = useWindow ? window.pinia.defineStore : defineStore
-  const { global } = window.i18n
 
   return defineStoreFunc({
     id: 'item',
@@ -88,7 +88,7 @@ export const useItemStore = (useWindow = false) => {
 
               notificationStore.showNotification({
                 type: 'success',
-                message: global.t('items.created_message'),
+                message: t('items.created_message'),
               })
 
               resolve(response)
@@ -116,7 +116,7 @@ export const useItemStore = (useWindow = false) => {
 
                 notificationStore.showNotification({
                   type: 'success',
-                  message: global.t('items.updated_message'),
+                  message: t('items.updated_message'),
                 })
               }
 
@@ -141,7 +141,7 @@ export const useItemStore = (useWindow = false) => {
 
               notificationStore.showNotification({
                 type: 'success',
-                message: global.tc('items.deleted_message', 1),
+                message: tc('items.deleted_message', 1),
               })
 
               resolve(response)
@@ -169,7 +169,7 @@ export const useItemStore = (useWindow = false) => {
 
               notificationStore.showNotification({
                 type: 'success',
-                message: global.tc('items.deleted_message', 2),
+                message: tc('items.deleted_message', 2),
               })
 
               resolve(response)
@@ -213,7 +213,7 @@ export const useItemStore = (useWindow = false) => {
               if (response.data.data) {
                 notificationStore.showNotification({
                   type: 'success',
-                  message: global.t(
+                  message: t(
                     'settings.customization.items.item_unit_added'
                   ),
                 })
@@ -251,7 +251,7 @@ export const useItemStore = (useWindow = false) => {
               if (response.data.data) {
                 notificationStore.showNotification({
                   type: 'success',
-                  message: global.t(
+                  message: t(
                     'settings.customization.items.item_unit_updated'
                   ),
                 })
@@ -317,7 +317,7 @@ export const useItemStore = (useWindow = false) => {
               if (response.data.success) {
                 notificationStore.showNotification({
                   type: 'success',
-                  message: global.t(
+                  message: t(
                     'settings.customization.items.deleted_message'
                   ),
                 })

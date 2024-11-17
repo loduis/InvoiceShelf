@@ -27,10 +27,4 @@ const route = useRoute()
 const isAppLoaded = computed(() => {
   return globalStore.isAppLoaded
 })
-
-loadData()
-
-async function loadData() {
-  await globalStore.bootstrap(route.params.company)
-}
 </script>

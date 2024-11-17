@@ -1,11 +1,11 @@
 import axios from 'axios'
+import { t } from '@/scripts/i18n'
 import { defineStore } from 'pinia'
 import { useNotificationStore } from '@/scripts/stores/notification'
 import { handleError } from '@/scripts/helpers/error-handling'
 
 export const useTaxTypeStore = (useWindow = false) => {
   const defineStoreFunc = useWindow ? window.pinia.defineStore : defineStore
-  const { global } = window.i18n
 
   return defineStoreFunc({
     id: 'taxType',
@@ -77,7 +77,7 @@ export const useTaxTypeStore = (useWindow = false) => {
               this.taxTypes.push(response.data.data)
               notificationStore.showNotification({
                 type: 'success',
-                message: global.t('settings.tax_types.created_message'),
+                message: t('settings.tax_types.created_message'),
               })
               resolve(response)
             })
@@ -101,7 +101,7 @@ export const useTaxTypeStore = (useWindow = false) => {
                 this.taxTypes[pos] = data.taxTypes
                 notificationStore.showNotification({
                   type: 'success',
-                  message: global.t('settings.tax_types.updated_message'),
+                  message: t('settings.tax_types.updated_message'),
                 })
               }
               resolve(response)
@@ -148,7 +148,7 @@ export const useTaxTypeStore = (useWindow = false) => {
                 const notificationStore = useNotificationStore()
                 notificationStore.showNotification({
                   type: 'success',
-                  message: global.t('settings.tax_types.deleted_message'),
+                  message: t('settings.tax_types.deleted_message'),
                 })
               }
               resolve(response)

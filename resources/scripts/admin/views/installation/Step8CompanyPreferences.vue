@@ -144,8 +144,8 @@
 </template>
 
 <script setup>
-import { useI18n } from 'vue-i18n'
-import { ref, computed, onMounted, reactive } from 'vue'
+import { locale, t } from '@/scripts/i18n'
+import { ref, computed, reactive } from 'vue'
 import { required, helpers } from '@vuelidate/validators'
 import useVuelidate from '@vuelidate/core'
 import Ls from '@/scripts/services/ls.js'
@@ -163,13 +163,12 @@ let isFetchingInitialData = ref(false)
 
 let currentPreferences = reactive({
   currency: 1,
-  language: 'en',
+  language: locale.value,
   carbon_date_format: 'd M Y',
   time_zone: 'UTC',
   fiscal_year: '1-12',
 })
 
-const { tm, t } = useI18n()
 const router = useRouter()
 
 isFetchingInitialData.value = true
@@ -181,27 +180,6 @@ const fiscalYearsList = computed(() => {
     })
   })
 })
-
-const options = reactive([
-  {
-    title: tm('settings.customization.invoices.allow'),
-    value: 'allow',
-  },
-  {
-    title: tm(
-      'settings.customization.invoices.disable_on_invoice_partial_paid'
-    ),
-    value: 'disable_on_invoice_partial_paid',
-  },
-  {
-    title: tm('settings.customization.invoices.disable_on_invoice_paid'),
-    value: 'disable_on_invoice_paid',
-  },
-  {
-    title: tm('settings.customization.invoices.disable_on_invoice_sent'),
-    value: 'disable_on_invoice_sent',
-  },
-])
 
 const dialogStore = useDialogStore()
 const globalStore = useGlobalStore()
@@ -224,7 +202,7 @@ Promise.all([
   globalStore.fetchCountries(),
   globalStore.fetchConfig(fiscalYears),
   globalStore.fetchConfig(data),
-]).then(([res1]) => {
+]).then(() => {
   isFetchingInitialData.value = false
 })
 

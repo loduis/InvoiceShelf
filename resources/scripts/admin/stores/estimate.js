@@ -2,6 +2,7 @@ import axios from 'axios'
 import moment from 'moment'
 import Guid from 'guid'
 import _ from 'lodash'
+import { t } from '@/scripts/i18n'
 import { defineStore } from 'pinia'
 import { useRoute } from 'vue-router'
 import { useCompanyStore } from './company'
@@ -17,7 +18,6 @@ import { useUserStore } from './user'
 
 export const useEstimateStore = (useWindow = false) => {
   const defineStoreFunc = useWindow ? window.pinia.defineStore : defineStore
-  const { global } = window.i18n
 
   return defineStoreFunc({
     id: 'estimate',
@@ -201,10 +201,7 @@ export const useEstimateStore = (useWindow = false) => {
             }
           }
           salesTax.id = found.tax_type_id
-          console.log(salesTax, 'salesTax');
-
           taxTypeStore.taxTypes.push(salesTax)
-          console.log(taxTypeStore.taxTypes);
         }
       },
 
@@ -218,7 +215,7 @@ export const useEstimateStore = (useWindow = false) => {
               if (!data.is_preview) {
                 notificationStore.showNotification({
                   type: 'success',
-                  message: global.t('estimates.send_estimate_successfully'),
+                  message: t('estimates.send_estimate_successfully'),
                 })
               }
               resolve(response)
@@ -240,7 +237,7 @@ export const useEstimateStore = (useWindow = false) => {
 
               notificationStore.showNotification({
                 type: 'success',
-                message: global.t('estimates.created_message'),
+                message: t('estimates.created_message'),
               })
 
               resolve(response)
@@ -267,7 +264,7 @@ export const useEstimateStore = (useWindow = false) => {
 
               notificationStore.showNotification({
                 type: 'success',
-                message: global.t('estimates.deleted_message', 1),
+                message: t('estimates.deleted_message', 1),
               })
               resolve(response)
             })
@@ -295,7 +292,7 @@ export const useEstimateStore = (useWindow = false) => {
 
               notificationStore.showNotification({
                 type: 'success',
-                message: global.tc('estimates.deleted_message', 2),
+                message: tc('estimates.deleted_message', 2),
               })
               resolve(response)
             })
@@ -318,7 +315,7 @@ export const useEstimateStore = (useWindow = false) => {
               const notificationStore = useNotificationStore()
               notificationStore.showNotification({
                 type: 'success',
-                message: global.t('estimates.updated_message'),
+                message: t('estimates.updated_message'),
               })
               resolve(response)
             })
@@ -337,7 +334,7 @@ export const useEstimateStore = (useWindow = false) => {
               const notificationStore = useNotificationStore()
               notificationStore.showNotification({
                 type: 'success',
-                message: global.t('estimates.cloned_successfully'),
+                message: t('estimates.cloned_successfully'),
               })
               resolve(response)
             })
@@ -363,7 +360,7 @@ export const useEstimateStore = (useWindow = false) => {
 
                 notificationStore.showNotification({
                   type: 'success',
-                  message: global.t('estimates.marked_as_accepted_message'),
+                  message: t('estimates.marked_as_accepted_message'),
                 })
               }
               resolve(response)
@@ -384,7 +381,7 @@ export const useEstimateStore = (useWindow = false) => {
 
               notificationStore.showNotification({
                 type: 'success',
-                message: global.t('estimates.marked_as_rejected_message'),
+                message: t('estimates.marked_as_rejected_message'),
               })
               resolve(response)
             })
@@ -409,7 +406,7 @@ export const useEstimateStore = (useWindow = false) => {
                 const notificationStore = useNotificationStore()
                 notificationStore.showNotification({
                   type: 'success',
-                  message: global.t('estimates.mark_as_sent_successfully'),
+                  message: t('estimates.mark_as_sent_successfully'),
                 })
               }
 
@@ -430,7 +427,7 @@ export const useEstimateStore = (useWindow = false) => {
             .then((response) => {
               notificationStore.showNotification({
                 type: 'success',
-                message: global.t('estimates.conversion_message'),
+                message: t('estimates.conversion_message'),
               })
               resolve(response)
             })

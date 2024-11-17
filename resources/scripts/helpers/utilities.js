@@ -1,6 +1,4 @@
-import i18n from '../plugins/i18n'
-const { global } = i18n
-import { useNotificationStore } from '@/scripts/stores/notification'
+import { t } from '../i18n'
 import { isArray } from 'lodash'
 
 export default {
@@ -234,27 +232,27 @@ export default {
   getStatusTranslation(status) {
     switch (status) {
       case 'DRAFT':
-        return global.t('general.draft')
+        return t('general.draft')
       case 'PAID':
-        return global.t('invoices.paid')
+        return t('invoices.paid')
       case 'UNPAID':
-        return global.t('invoices.unpaid')
+        return t('invoices.unpaid')
       case 'SENT':
-        return global.t('general.sent')
+        return t('general.sent')
       case 'REJECTED':
-        return global.t('estimates.rejected')
+        return t('estimates.rejected')
       case 'ACCEPTED':
-        return global.t('estimates.accepted')
+        return t('estimates.accepted')
       case 'VIEWED':
-        return global.t('invoices.viewed')
+        return t('invoices.viewed')
       case 'EXPIRED':
-        return global.t('estimates.expired')
+        return t('estimates.expired')
       case 'PARTIALLY PAID':
-        return global.t('estimates.partially_paid')
+        return t('estimates.partially_paid')
       case 'COMPLETED':
-        return global.t('invoices.completed')
+        return t('invoices.completed')
       case 'DUE':
-        return global.t('general.due')
+        return t('general.due')
       default:
         return status
     }

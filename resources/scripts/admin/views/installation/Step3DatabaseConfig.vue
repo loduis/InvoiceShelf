@@ -21,7 +21,7 @@ import Pgsql from './database/PgsqlDatabase.vue'
 import Sqlite from './database/SqliteDatabase.vue'
 import { useNotificationStore } from '@/scripts/stores/notification'
 import { useInstallationStore } from '@/scripts/admin/stores/installation'
-import { useI18n } from 'vue-i18n'
+import { t, locale } from '@/scripts/i18n'
 
 export default {
   components: {
@@ -35,14 +35,12 @@ export default {
   setup(props, { emit }) {
     const database_connection = ref('mysql')
     const isSaving = ref(false)
-    const { t } = useI18n()
-    const { global } = window.i18n
 
     const notificationStore = useNotificationStore()
     const installationStore = useInstallationStore()
 
     const databaseData = computed(() => {
-      installationStore.currentDataBaseData.app_locale = global.locale.value
+      installationStore.currentDataBaseData.app_locale = locale.value
       return installationStore.currentDataBaseData
     })
 
@@ -78,7 +76,7 @@ export default {
           emit('next', 3)
 
           let language = {
-            profile_language: global.locale.value,
+            profile_language: locale.value,
           }
           await installationStore.addInstallationLanguage(language)
 

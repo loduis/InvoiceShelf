@@ -1,5 +1,6 @@
 import { defineStore } from 'pinia'
 import axios from 'axios'
+import { t } from '@/scripts/i18n'
 import recurringInvoiceStub from '@/scripts/admin/stub/recurring-invoice'
 import recurringInvoiceItemStub from '@/scripts/admin/stub/recurring-invoice-item'
 import TaxStub from '../stub/tax'
@@ -17,7 +18,6 @@ import { useNotificationStore } from '@/scripts/stores/notification'
 
 export const useRecurringInvoiceStore = (useWindow = false) => {
   const defineStoreFunc = useWindow ? window.pinia.defineStore : defineStore
-  const { global } = window.i18n
 
   return defineStoreFunc({
     id: 'recurring-invoice',
@@ -36,17 +36,17 @@ export const useRecurringInvoiceStore = (useWindow = false) => {
       },
 
       frequencies: [
-        { label: global.t('recurring_invoices.frequency.every_minute'), value: '* * * * *' },
-        { label: global.t('recurring_invoices.frequency.every_30_minute'), value: '*/30 * * * *' },
-        { label: global.t('recurring_invoices.frequency.every_hour'), value: '0 * * * *' },
-        { label: global.t('recurring_invoices.frequency.every_2_hour'), value: '0 */2 * * *' },
-        { label: global.t('recurring_invoices.frequency.every_day_at_midnight'), value: '0 0 * * *' },
-        { label: global.t('recurring_invoices.frequency.every_week'), value: '0 0 * * 0' },
-        { label: global.t('recurring_invoices.frequency.every_15_days_at_midnight'), value: '0 5 */15 * *' },
-        { label: global.t('recurring_invoices.frequency.on_the_first_day_of_every_month_at_midnight'), value: '0 0 1 * *' },
-        { label: global.t('recurring_invoices.frequency.every_6_month'), value: '0 0 1 */6 *' },
-        { label: global.t('recurring_invoices.frequency.every_year_on_the_first_day_of_january_at_midnight'), value: '0 0 1 1 *' },
-        { label: global.t('recurring_invoices.frequency.custom'), value: 'CUSTOM' },
+        { label: t('recurring_invoices.frequency.every_minute'), value: '* * * * *' },
+        { label: t('recurring_invoices.frequency.every_30_minute'), value: '*/30 * * * *' },
+        { label: t('recurring_invoices.frequency.every_hour'), value: '0 * * * *' },
+        { label: t('recurring_invoices.frequency.every_2_hour'), value: '0 */2 * * *' },
+        { label: t('recurring_invoices.frequency.every_day_at_midnight'), value: '0 0 * * *' },
+        { label: t('recurring_invoices.frequency.every_week'), value: '0 0 * * 0' },
+        { label: t('recurring_invoices.frequency.every_15_days_at_midnight'), value: '0 5 */15 * *' },
+        { label: t('recurring_invoices.frequency.on_the_first_day_of_every_month_at_midnight'), value: '0 0 1 * *' },
+        { label: t('recurring_invoices.frequency.every_6_month'), value: '0 0 1 */6 *' },
+        { label: t('recurring_invoices.frequency.every_year_on_the_first_day_of_january_at_midnight'), value: '0 0 1 1 *' },
+        { label: t('recurring_invoices.frequency.custom'), value: 'CUSTOM' },
       ],
     }),
 
@@ -126,7 +126,7 @@ export const useRecurringInvoiceStore = (useWindow = false) => {
 
               notificationStore.showNotification({
                 type: 'success',
-                message: global.t('recurring_invoices.created_message'),
+                message: t('recurring_invoices.created_message'),
               })
               resolve(response)
             })
@@ -169,7 +169,7 @@ export const useRecurringInvoiceStore = (useWindow = false) => {
 
               notificationStore.showNotification({
                 type: 'success',
-                message: global.t('recurring_invoices.updated_message'),
+                message: t('recurring_invoices.updated_message'),
               })
 
               let pos = this.recurringInvoices.findIndex(
@@ -395,7 +395,6 @@ export const useRecurringInvoiceStore = (useWindow = false) => {
             this.isFetchingInitialSettings = false
           })
           .catch((err) => {
-            console.log(err);
             handleError(err)
           })
       },
@@ -449,7 +448,7 @@ export const useRecurringInvoiceStore = (useWindow = false) => {
 
               notificationStore.showNotification({
                 type: 'error',
-                message: global.t('errors.enter_valid_cron_format'),
+                message: t('errors.enter_valid_cron_format'),
               })
               reject(err)
             })

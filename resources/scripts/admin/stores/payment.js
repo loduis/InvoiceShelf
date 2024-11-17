@@ -1,5 +1,6 @@
 import axios from 'axios'
 import moment from 'moment'
+import { t, tc } from '@/scripts/i18n'
 import { defineStore } from 'pinia'
 import { useRoute } from 'vue-router'
 import { useCompanyStore } from './company'
@@ -9,7 +10,6 @@ import { handleError } from '@/scripts/helpers/error-handling'
 
 export const usePaymentStore = (useWindow = false) => {
   const defineStoreFunc = useWindow ? window.pinia.defineStore : defineStore
-  const { global } = window.i18n
 
   return defineStoreFunc({
     id: 'payment',
@@ -133,7 +133,7 @@ export const usePaymentStore = (useWindow = false) => {
               const notificationStore = useNotificationStore()
               notificationStore.showNotification({
                 type: 'success',
-                message: global.t('payments.created_message'),
+                message: t('payments.created_message'),
               })
               resolve(response)
             })
@@ -159,7 +159,7 @@ export const usePaymentStore = (useWindow = false) => {
                 const notificationStore = useNotificationStore()
                 notificationStore.showNotification({
                   type: 'success',
-                  message: global.t('payments.updated_message'),
+                  message: t('payments.updated_message'),
                 })
               }
               resolve(response)
@@ -185,7 +185,7 @@ export const usePaymentStore = (useWindow = false) => {
 
               notificationStore.showNotification({
                 type: 'success',
-                message: global.t('payments.deleted_message', 1),
+                message: t('payments.deleted_message', 1),
               })
               resolve(response)
             })
@@ -210,7 +210,7 @@ export const usePaymentStore = (useWindow = false) => {
               })
               notificationStore.showNotification({
                 type: 'success',
-                message: global.tc('payments.deleted_message', 2),
+                message: tc('payments.deleted_message', 2),
               })
               resolve(response)
             })
@@ -291,7 +291,7 @@ export const usePaymentStore = (useWindow = false) => {
               const notificationStore = useNotificationStore()
               notificationStore.showNotification({
                 type: 'success',
-                message: global.t('payments.send_payment_successfully'),
+                message: t('payments.send_payment_successfully'),
               })
               resolve(response)
             })
@@ -364,7 +364,7 @@ export const usePaymentStore = (useWindow = false) => {
               this.paymentModes.push(response.data.data)
               notificationStore.showNotification({
                 type: 'success',
-                message: global.t('settings.payment_modes.payment_mode_added'),
+                message: t('settings.payment_modes.payment_mode_added'),
               })
               resolve(response)
             })
@@ -388,7 +388,7 @@ export const usePaymentStore = (useWindow = false) => {
                 this.paymentModes[pos] = data.paymentModes
                 notificationStore.showNotification({
                   type: 'success',
-                  message: global.t(
+                  message: t(
                     'settings.payment_modes.payment_mode_updated'
                   ),
                 })
@@ -416,7 +416,7 @@ export const usePaymentStore = (useWindow = false) => {
               if (response.data.success) {
                 notificationStore.showNotification({
                   type: 'success',
-                  message: global.t('settings.payment_modes.deleted_message'),
+                  message: t('settings.payment_modes.deleted_message'),
                 })
               }
 

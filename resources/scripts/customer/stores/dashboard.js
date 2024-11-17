@@ -1,4 +1,4 @@
-const { defineStore } = window.pinia
+import { defineStore } from 'pinia'
 import { useGlobalStore } from '@/scripts/customer/stores/global'
 import axios from 'axios'
 import { handleError } from '@/scripts/customer/helpers/error-handling'

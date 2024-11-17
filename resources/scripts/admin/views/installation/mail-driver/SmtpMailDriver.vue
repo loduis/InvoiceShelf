@@ -130,7 +130,7 @@
           v-model.trim="smtpConfig.from_mail"
           :invalid="v$.smtpConfig.from_mail.$error"
           :content-loading="isFetchingInitialData"
-          type="text"
+          type="email"
           name="from_mail"
           @input="v$.smtpConfig.from_mail.$touch()"
         />

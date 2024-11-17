@@ -54,7 +54,7 @@
           v-model.trim="basicMailConfig.from_mail"
           :invalid="v$.basicMailConfig.from_mail.$error"
           :content-loading="isFetchingInitialData"
-          type="text"
+          type="email"
           @input="v$.basicMailConfig.from_mail.$touch()"
         />
       </BaseInputGroup>

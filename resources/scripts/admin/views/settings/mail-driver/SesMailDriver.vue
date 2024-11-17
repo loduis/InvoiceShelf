@@ -89,7 +89,7 @@
         <BaseInput
           v-model.trim="mailDriverStore.sesConfig.from_mail"
           :content-loading="isFetchingInitialData"
-          type="text"
+          type="email"
           name="from_mail"
           :invalid="v$.sesConfig.from_mail.$error"
           @input="v$.sesConfig.from_mail.$touch()"

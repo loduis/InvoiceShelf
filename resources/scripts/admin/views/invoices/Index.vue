@@ -296,19 +296,19 @@ const status = ref([
   {
     label: t('invoices.status'),
     options: [
-      {label: t('general.draft'), value: 'DRAFT'},
-      {label: t('general.due'), value: 'DUE'},
-      {label: t('general.sent'), value: 'SENT'},
-      {label: t('invoices.viewed'), value: 'VIEWED'},
-      {label: t('invoices.completed'), value: 'COMPLETED'}
+      { label: t('general.draft'), value: 'DRAFT' },
+      { label: t('general.due'), value: 'DUE' },
+      { label: t('general.sent'), value: 'SENT' },
+      { label: t('invoices.viewed'), value: 'VIEWED' },
+      { label: t('invoices.completed'), value: 'COMPLETED' }
     ],
   },
   {
     label: t('invoices.paid_status'),
     options: [
-      {label: t('invoices.unpaid'), value: 'UNPAID'},
-      {label: t('invoices.paid'), value: 'PAID'},
-      {label: t('invoices.partially_paid'), value: 'PARTIALLY_PAID'}],
+      { label: t('invoices.unpaid'), value: 'UNPAID' },
+      { label: t('invoices.paid'), value: 'PAID' },
+      { label: t('invoices.partially_paid'), value: 'PARTIALLY_PAID' }],
   },
   ,
 ])
@@ -418,12 +418,9 @@ async function fetchData({ page, filter, sort }) {
     page,
   }
 
-  console.log(data)
-
   isRequestOngoing.value = true
 
   let response = await invoiceStore.fetchInvoices(data)
-  console.log('API response:', response.data.data)
 
   isRequestOngoing.value = false
 

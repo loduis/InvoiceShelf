@@ -254,7 +254,6 @@ async function submitForm() {
   v$.value.$touch()
 
   if (v$.value.$invalid) {
-    console.log('Form is invalid:', v$.value.$errors)
     return false
   }
 
@@ -268,20 +267,20 @@ async function submitForm() {
   })
   if (data.discount_per_item === 'YES') {
     data.items.forEach((item, index) => {
-      if (item.discount_type === 'fixed'){
+      if (item.discount_type === 'fixed') {
         data.items[index].discount = item.discount * 100
       }
     })
   }
   else {
-    if (data.discount_type === 'fixed'){
+    if (data.discount_type === 'fixed') {
       data.discount = data.discount * 100
     }
   }
-    if (
+  if (
     !invoiceStore.newInvoice.tax_per_item === 'YES'
     && data.taxes.length
-  ){
+  ) {
     data.tax_type_ids = data.taxes.map(_t => _t.tax_type_id)
   }
 

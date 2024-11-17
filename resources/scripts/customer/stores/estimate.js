@@ -1,4 +1,5 @@
-const { defineStore } = window.pinia
+import { defineStore } from 'pinia'
+import { t } from '@/scripts/i18n'
 import { useNotificationStore } from '@/scripts/stores/notification'
 import axios from 'axios'
 import { handleError } from '@/scripts/customer/helpers/error-handling'
@@ -74,7 +75,7 @@ export const useEstimateStore = defineStore({
               const notificationStore = useNotificationStore(true)
               notificationStore.showNotification({
                 type: 'success',
-                message: global.t('estimates.marked_as_accepted_message'),
+                message: t('estimates.marked_as_accepted_message'),
               })
             }
             resolve(response)
@@ -101,7 +102,7 @@ export const useEstimateStore = defineStore({
               const notificationStore = useNotificationStore(true)
               notificationStore.showNotification({
                 type: 'success',
-                message: global.t('estimates.marked_as_rejected_message'),
+                message: t('estimates.marked_as_rejected_message'),
               })
             }
             resolve(response)
@@ -114,3 +115,4 @@ export const useEstimateStore = defineStore({
     },
   },
 })
+

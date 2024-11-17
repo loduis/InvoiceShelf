@@ -1,11 +1,11 @@
 import axios from 'axios'
+import { t } from '@/scripts/i18n'
 import { defineStore } from 'pinia'
 import { useNotificationStore } from '@/scripts/stores/notification'
 import { handleError } from '@/scripts/helpers/error-handling'
 
 export const useMailDriverStore = (useWindow = false) => {
   const defineStoreFunc = useWindow ? window.pinia.defineStore : defineStore
-  const { global } = window.i18n
 
   return defineStoreFunc({
     id: 'mail-driver',
@@ -99,12 +99,12 @@ export const useMailDriverStore = (useWindow = false) => {
               if (response.data.success) {
                 notificationStore.showNotification({
                   type: 'success',
-                  message: global.t('wizard.success.' + response.data.success),
+                  message: t('wizard.success.' + response.data.success),
                 })
               } else {
                 notificationStore.showNotification({
                   type: 'error',
-                  message: global.t('wizard.errors.' + response.data.error),
+                  message: t('wizard.errors.' + response.data.error),
                 })
               }
               resolve(response)
@@ -125,12 +125,12 @@ export const useMailDriverStore = (useWindow = false) => {
               if (response.data.success) {
                 notificationStore.showNotification({
                   type: 'success',
-                  message: global.t('general.send_mail_successfully'),
+                  message: t('general.send_mail_successfully'),
                 })
               } else {
                 notificationStore.showNotification({
                   type: 'error',
-                  message: global.t('validation.something_went_wrong'),
+                  message: t('validation.something_went_wrong'),
                 })
               }
               resolve(response)

@@ -1,11 +1,11 @@
 import axios from 'axios'
+import {t, loadLocale } from '@/scripts/i18n'
 import { defineStore } from 'pinia'
 import { useNotificationStore } from '@/scripts/stores/notification'
 import { handleError } from '@/scripts/helpers/error-handling'
 
 export const useUserStore = (useWindow = false) => {
   const defineStoreFunc = useWindow ? window.pinia.defineStore : defineStore
-  const { global } = window.i18n
 
   return defineStoreFunc({
     id: 'user',
@@ -39,7 +39,7 @@ export const useUserStore = (useWindow = false) => {
               const notificationStore = useNotificationStore()
               notificationStore.showNotification({
                 type: 'success',
-                message: global.t('settings.account_settings.updated_message'),
+                message: t('settings.account_settings.updated_message'),
               })
               resolve(response)
             })
@@ -103,10 +103,10 @@ export const useUserStore = (useWindow = false) => {
         return new Promise((resolve, reject) => {
           axios
             .put('/api/v1/me/settings', data)
-            .then((response) => {
+            .then(async (response) => {
               if (data.settings.language) {
                 this.currentUserSettings.language = data.settings.language
-                global.locale.value = data.settings.language
+                await loadLocale(data.settings.language, true)
               }
               if (data.settings.default_estimate_template) {
                 this.currentUserSettings.default_estimate_template =

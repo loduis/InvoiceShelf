@@ -1,5 +1,5 @@
 import { handleError } from '@/scripts/customer/helpers/error-handling'
-const { defineStore } = window.pinia
+import { defineStore } from 'pinia'
 import { useNotificationStore } from '@/scripts/stores/notification'
 import stubs from '@/scripts/customer/stubs/address'
 import axios from 'axios'

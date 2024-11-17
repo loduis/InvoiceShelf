@@ -78,7 +78,7 @@
 
       <LoginBackgroundOverlay class="absolute h-full w-full right-[7.5%]" />
 
-      <div class="md:pl-10 xl:pl-0 relative z-50 w-7/12 xl:w-5/12 xl:w-5/12">
+      <div class="md:pl-10 xl:pl-0 relative z-50 w-7/12 xl:w-5/12">
         <h1
           class="
             hidden
@@ -135,13 +135,15 @@ import LoginPlanetCrater from '@/scripts/components/svg/LoginPlanetCrater.vue'
 import LoginBottomVector from '@/scripts/components/svg/LoginBottomVector.vue'
 import LoginBackgroundOverlay from '@/scripts/components/svg/LoginBackgroundOverlay.vue'
 import { computed, ref } from 'vue'
+import { useI18n } from 'vue-i18n'
+const { t } = useI18n()
 
 const pageHeading = computed(() => {
   if (window.login_page_heading) {
     return window.login_page_heading
   }
 
-  return 'Simple Invoicing for Individuals Small Businesses'
+  return t('login.title')
 })
 
 const pageDescription = computed(() => {
@@ -149,7 +151,7 @@ const pageDescription = computed(() => {
     return window.login_page_description
   }
 
-  return 'InvoiceShelf helps you track expenses, record payments & generate beautiful invoices & estimates.'
+  return t('login.description')
 })
 
 const copyrightText = computed(() => {
@@ -167,6 +169,3 @@ const loginPageLogo = computed(() => {
   return false
 })
 </script>
-
-<style lang="scss" scoped>
-</style>

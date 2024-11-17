@@ -1,5 +1,5 @@
 import { handleError } from '@/scripts/customer/helpers/error-handling'
-const { defineStore } = window.pinia
+import { defineStore } from 'pinia'
 import axios from 'axios'
 
 export const usePaymentStore = defineStore({

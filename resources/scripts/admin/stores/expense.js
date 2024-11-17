@@ -1,5 +1,6 @@
 import axios from 'axios'
 import { defineStore } from 'pinia'
+import { t, tc } from '@/scripts/i18n'
 import { handleError } from '@/scripts/helpers/error-handling'
 import { useNotificationStore } from '@/scripts/stores/notification'
 import expenseStub from '@/scripts/admin/stub/expense'
@@ -7,7 +8,6 @@ import utils from '@/scripts/helpers/utilities'
 
 export const useExpenseStore = (useWindow = false) => {
   const defineStoreFunc = useWindow ? window.pinia.defineStore : defineStore
-  const { global } = window.i18n
 
   return defineStoreFunc({
     id: 'expense',
@@ -106,7 +106,7 @@ export const useExpenseStore = (useWindow = false) => {
 
               notificationStore.showNotification({
                 type: 'success',
-                message: global.t('expenses.created_message'),
+                message: t('expenses.created_message'),
               })
 
               resolve(response)
@@ -136,7 +136,7 @@ export const useExpenseStore = (useWindow = false) => {
 
             notificationStore.showNotification({
               type: 'success',
-              message: global.t('expenses.updated_message'),
+              message: t('expenses.updated_message'),
             })
 
             resolve(response)
@@ -185,7 +185,7 @@ export const useExpenseStore = (useWindow = false) => {
 
               notificationStore.showNotification({
                 type: 'success',
-                message: global.tc('expenses.deleted_message', 1),
+                message: tc('expenses.deleted_message', 1),
               })
               resolve(response)
             })
@@ -211,7 +211,7 @@ export const useExpenseStore = (useWindow = false) => {
               })
               notificationStore.showNotification({
                 type: 'success',
-                message: global.tc('expenses.deleted_message', 2),
+                message: tc('expenses.deleted_message', 2),
               })
               resolve(response)
             })

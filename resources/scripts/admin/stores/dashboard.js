@@ -1,11 +1,9 @@
 import axios from 'axios'
 import { defineStore } from 'pinia'
-import { useGlobalStore } from '@/scripts/admin/stores/global'
 import { handleError } from '@/scripts/helpers/error-handling'
 
 export const useDashboardStore = (useWindow = false) => {
   const defineStoreFunc = useWindow ? window.pinia.defineStore : defineStore
-  const { global } = window.i18n
 
   return defineStoreFunc({
     id: 'dashboard',

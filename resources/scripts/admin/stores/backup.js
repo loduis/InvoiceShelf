@@ -1,11 +1,11 @@
 import axios from 'axios'
 import { defineStore } from 'pinia'
+import { t } from '@/scripts/i18n'
 import { useNotificationStore } from '@/scripts/stores/notification'
 import { handleError } from '@/scripts/helpers/error-handling'
 
 export const useBackupStore = (useWindow = false) => {
   const defineStoreFunc = useWindow ? window.pinia.defineStore : defineStore
-  const { global } = window.i18n
 
   return defineStoreFunc({
     id: 'backup',
@@ -42,7 +42,7 @@ export const useBackupStore = (useWindow = false) => {
               const notificationStore = useNotificationStore()
               notificationStore.showNotification({
                 type: 'success',
-                message: global.t('settings.backup.created_message'),
+                message: t('settings.backup.created_message'),
               })
               resolve(response)
             })
@@ -61,7 +61,7 @@ export const useBackupStore = (useWindow = false) => {
               const notificationStore = useNotificationStore()
               notificationStore.showNotification({
                 type: 'success',
-                message: global.t('settings.backup.deleted_message'),
+                message: t('settings.backup.deleted_message'),
               })
               resolve(response)
             })

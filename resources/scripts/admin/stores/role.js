@@ -1,4 +1,5 @@
 import axios from 'axios'
+import { t } from '@/scripts/i18n'
 import { defineStore } from 'pinia'
 import { useNotificationStore } from '@/scripts/stores/notification'
 import _ from 'lodash'
@@ -6,7 +7,6 @@ import { handleError } from '@/scripts/helpers/error-handling'
 
 export const useRoleStore = (useWindow = false) => {
   const defineStoreFunc = useWindow ? window.pinia.defineStore : defineStore
-  const { global } = window.i18n
 
   return defineStoreFunc({
     id: 'role',
@@ -87,7 +87,7 @@ export const useRoleStore = (useWindow = false) => {
               this.roles.push(response.data.role)
               notificationStore.showNotification({
                 type: 'success',
-                message: global.t('settings.roles.created_message'),
+                message: t('settings.roles.created_message'),
               })
               resolve(response)
             })
@@ -111,7 +111,7 @@ export const useRoleStore = (useWindow = false) => {
                 this.roles[pos] = data.role
                 notificationStore.showNotification({
                   type: 'success',
-                  message: global.t('settings.roles.updated_message'),
+                  message: t('settings.roles.updated_message'),
                 })
               }
               resolve(response)
@@ -154,7 +154,7 @@ export const useRoleStore = (useWindow = false) => {
 
               notificationStore.showNotification({
                 type: 'success',
-                message: global.t('settings.roles.deleted_message'),
+                message: t('settings.roles.deleted_message'),
               })
               resolve(response)
             })

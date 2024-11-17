@@ -1,11 +1,11 @@
 import axios from 'axios'
+import { t } from '@/scripts/i18n'
 import { defineStore } from 'pinia'
 import { useNotificationStore } from '@/scripts/stores/notification'
 import { handleError } from '@/scripts/helpers/error-handling'
 
 export const useDiskStore = (useWindow = false) => {
   const defineStoreFunc = useWindow ? window.pinia.defineStore : defineStore
-  const { global } = window.i18n
 
   return defineStoreFunc({
     id: 'disk',
@@ -127,7 +127,7 @@ export const useDiskStore = (useWindow = false) => {
                 const notificationStore = useNotificationStore()
                 notificationStore.showNotification({
                   type: 'success',
-                  message: global.t('settings.disk.deleted_message'),
+                  message: t('settings.disk.deleted_message'),
                 })
               }
               resolve(response)
@@ -152,7 +152,7 @@ export const useDiskStore = (useWindow = false) => {
                 const notificationStore = useNotificationStore()
                 notificationStore.showNotification({
                   type: 'success',
-                  message: global.t('settings.disk.success_set_default_disk'),
+                  message: t('settings.disk.success_set_default_disk'),
                 })
               }
               resolve(response)
@@ -173,7 +173,7 @@ export const useDiskStore = (useWindow = false) => {
                 const notificationStore = useNotificationStore()
                 notificationStore.showNotification({
                   type: 'success',
-                  message: global.t('settings.disk.success_create'),
+                  message: t('settings.disk.success_create'),
                 })
               }
               this.disks.push(response.data)
@@ -182,7 +182,7 @@ export const useDiskStore = (useWindow = false) => {
             .catch((err) => {
               /*   notificationStore.showNotification({
                 type: 'error',
-                message: global.t('settings.disk.invalid_disk_credentials'),
+                message: t('settings.disk.invalid_disk_credentials'),
               }) */
               handleError(err)
               reject(err)

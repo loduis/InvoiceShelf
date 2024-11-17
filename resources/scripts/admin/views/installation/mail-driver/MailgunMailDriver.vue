@@ -103,7 +103,7 @@
         <BaseInput
           v-model.trim="mailgunConfig.from_mail"
           name="from_mail"
-          type="text"
+          type="email"
           :invalid="v$.mailgunConfig.from_mail.$error"
           :content-loading="isFetchingInitialData"
           @input="v$.mailgunConfig.from_mail.$touch()"

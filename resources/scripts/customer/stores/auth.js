@@ -1,9 +1,9 @@
-const { defineStore } = window.pinia
+import { defineStore } from 'pinia'
 import axios from 'axios'
+import { tm } from '@/scripts/i18n'
 import { useNotificationStore } from '@/scripts/stores/notification'
 import router from '@/scripts/customer/customer-router'
 import { handleError } from '@/scripts/customer/helpers/error-handling'
-const { global } = window.i18n
 
 export const useAuthStore = defineStore({
   id: 'customerAuth',
@@ -27,7 +27,7 @@ export const useAuthStore = defineStore({
               .then((response) => {
                 notificationStore.showNotification({
                   type: 'success',
-                  message: global.tm('general.login_successfully'),
+                  message: tm('general.login_successfully'),
                 })
                 resolve(response)
                 setTimeout(() => {
@@ -54,7 +54,7 @@ export const useAuthStore = defineStore({
             if (response.data) {
               notificationStore.showNotification({
                 type: 'success',
-                message: global.tm('general.send_mail_successfully'),
+                message: tm('general.send_mail_successfully'),
               })
             }
             resolve(response)
@@ -63,7 +63,7 @@ export const useAuthStore = defineStore({
             if (err.response && err.response.status === 403) {
               notificationStore.showNotification({
                 type: 'error',
-                message: global.tm('errors.email_could_not_be_sent'),
+                message: tm('errors.email_could_not_be_sent'),
               })
             } else {
               handleError(err)
@@ -83,7 +83,7 @@ export const useAuthStore = defineStore({
               const notificationStore = useNotificationStore(true)
               notificationStore.showNotification({
                 type: 'success',
-                message: global.tm('login.password_reset_successfully'),
+                message: tm('login.password_reset_successfully'),
               })
             }
             resolve(response)
@@ -92,7 +92,7 @@ export const useAuthStore = defineStore({
             if (err.response && err.response.status === 403) {
               notificationStore.showNotification({
                 type: 'error',
-                message: global.tm('validation.email_incorrect'),
+                message: tm('validation.email_incorrect'),
               })
             }
             reject(err)
@@ -108,7 +108,7 @@ export const useAuthStore = defineStore({
             const notificationStore = useNotificationStore()
             notificationStore.showNotification({
               type: 'success',
-              message: global.tm('general.logged_out_successfully'),
+              message: tm('general.logged_out_successfully'),
             })
             router.push({ name: 'customer.login' })
             resolve(response)

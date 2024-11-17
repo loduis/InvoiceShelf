@@ -1,6 +1,7 @@
 import axios from 'axios'
 import { defineStore } from 'pinia'
 import { useRoute } from 'vue-router'
+import { t, tc } from '@/scripts/i18n'
 import { handleError } from '@/scripts/helpers/error-handling'
 import { useNotificationStore } from '@/scripts/stores/notification'
 import { useGlobalStore } from '@/scripts/admin/stores/global'
@@ -10,7 +11,6 @@ import customerStub from '@/scripts/admin/stub/customer'
 
 export const useCustomerStore = (useWindow = false) => {
   const defineStoreFunc = useWindow ? window.pinia.defineStore : defineStore
-  const { global } = window.i18n
 
   return defineStoreFunc({
     id: 'customer',
@@ -137,7 +137,7 @@ export const useCustomerStore = (useWindow = false) => {
               const notificationStore = useNotificationStore()
               notificationStore.showNotification({
                 type: 'success',
-                message: global.t('customers.created_message'),
+                message: t('customers.created_message'),
               })
               resolve(response)
             })
@@ -162,7 +162,7 @@ export const useCustomerStore = (useWindow = false) => {
                 const notificationStore = useNotificationStore()
                 notificationStore.showNotification({
                   type: 'success',
-                  message: global.t('customers.updated_message'),
+                  message: t('customers.updated_message'),
                 })
               }
               resolve(response)
@@ -186,7 +186,7 @@ export const useCustomerStore = (useWindow = false) => {
               this.customers.splice(index, 1)
               notificationStore.showNotification({
                 type: 'success',
-                message: global.tc('customers.deleted_message', 1),
+                message: tc('customers.deleted_message', 1),
               })
               resolve(response)
             })
@@ -213,7 +213,7 @@ export const useCustomerStore = (useWindow = false) => {
 
               notificationStore.showNotification({
                 type: 'success',
-                message: global.tc('customers.deleted_message', 2),
+                message: tc('customers.deleted_message', 2),
               })
               resolve(response)
             })

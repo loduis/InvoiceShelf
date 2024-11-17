@@ -1,4 +1,5 @@
 import axios from 'axios'
+import { t } from '@/scripts/i18n'
 import { defineStore } from 'pinia'
 import { useCompanyStore } from './company'
 import { useUserStore } from './user'
@@ -9,7 +10,6 @@ import _ from 'lodash'
 
 export const useGlobalStore = (useWindow = false) => {
   const defineStoreFunc = useWindow ? window.pinia.defineStore : defineStore
-  const { global } = window.i18n
 
   return defineStoreFunc({
     id: 'global',
@@ -78,11 +78,6 @@ export const useGlobalStore = (useWindow = false) => {
                 response.data.current_company_settings
               companyStore.selectedCompanyCurrency =
                 response.data.current_company_currency
-
-              if(typeof global.locale !== 'string') {
-                global.locale.value =
-                  response.data.current_user_settings.language || 'en'
-              }
 
               this.isAppLoaded = true
               resolve(response)
@@ -228,7 +223,7 @@ export const useGlobalStore = (useWindow = false) => {
 
                 notificationStore.showNotification({
                   type: 'success',
-                  message: global.t(message),
+                  message: t(message),
                 })
               }
 

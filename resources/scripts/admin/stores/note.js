@@ -4,7 +4,6 @@ import { handleError } from '@/scripts/helpers/error-handling'
 
 export const useNotesStore = (useWindow = false) => {
   const defineStoreFunc = useWindow ? window.pinia.defineStore : defineStore
-  const { global } = window.i18n
 
   return defineStoreFunc({
     id: 'notes',

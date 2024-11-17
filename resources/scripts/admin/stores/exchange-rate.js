@@ -1,11 +1,11 @@
 import axios from 'axios'
 import { defineStore } from 'pinia'
+import { t } from '@/scripts/i18n'
 import { useNotificationStore } from '@/scripts/stores/notification'
 import { handleError } from '@/scripts/helpers/error-handling'
 
 export const useExchangeRateStore = (useWindow = false) => {
   const defineStoreFunc = useWindow ? window.pinia.defineStore : defineStore
-  const { global } = window.i18n
   const notificationStore = useNotificationStore()
 
   return defineStoreFunc({
@@ -89,7 +89,7 @@ export const useExchangeRateStore = (useWindow = false) => {
             .then((response) => {
               notificationStore.showNotification({
                 type: 'success',
-                message: global.t('settings.exchange_rate.created_message'),
+                message: t('settings.exchange_rate.created_message'),
               })
 
               resolve(response)
@@ -109,7 +109,7 @@ export const useExchangeRateStore = (useWindow = false) => {
             .then((response) => {
               notificationStore.showNotification({
                 type: 'success',
-                message: global.t('settings.exchange_rate.updated_message'),
+                message: t('settings.exchange_rate.updated_message'),
               })
               resolve(response)
             })
@@ -130,12 +130,12 @@ export const useExchangeRateStore = (useWindow = false) => {
               if (response.data.success) {
                 notificationStore.showNotification({
                   type: 'success',
-                  message: global.t('settings.exchange_rate.deleted_message'),
+                  message: t('settings.exchange_rate.deleted_message'),
                 })
               } else {
                 notificationStore.showNotification({
                   type: 'error',
-                  message: global.t('settings.exchange_rate.error'),
+                  message: t('settings.exchange_rate.error'),
                 })
               }
               resolve(response)

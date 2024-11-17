@@ -1,4 +1,4 @@
-const { defineStore } = window.pinia
+import { defineStore } from 'pinia'
 
 export const useCustomerStore = defineStore({
   id: 'customers',

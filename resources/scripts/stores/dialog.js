@@ -1,8 +1,8 @@
+import { t } from '@/scripts/i18n'
 import { defineStore } from 'pinia'
 
 export const useDialogStore = (useWindow = false) => {
   const defineStoreFunc = useWindow ? window.pinia.defineStore : defineStore
-  const { global } = window.i18n
 
   return defineStoreFunc({
     id: 'dialog',
@@ -13,8 +13,8 @@ export const useDialogStore = (useWindow = false) => {
       size: 'md',
       data: null,
       variant: 'danger', // primary || danger
-      yesLabel: global.t('settings.custom_fields.yes'),
-      noLabel: global.t('settings.custom_fields.no'),
+      yesLabel: t('settings.custom_fields.yes'),
+      noLabel: t('settings.custom_fields.no'),
       resolve: null,
       hideNoButton: false,
     }),

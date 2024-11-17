@@ -1,14 +1,12 @@
 import axios from 'axios'
 import { defineStore } from 'pinia'
+import { t } from '@/scripts/i18n'
 import { useNotificationStore } from '@/scripts/stores/notification'
 import customFieldStub from '@/scripts/admin/stub/custom-field'
-import utilities from '@/scripts/helpers/utilities'
-import { util } from 'prettier'
 import { handleError } from '@/scripts/helpers/error-handling'
 
 export const useCustomFieldStore = (useWindow = false) => {
   const defineStoreFunc = useWindow ? window.pinia.defineStore : defineStore
-  const { global } = window.i18n
 
   return defineStoreFunc({
     id: 'custom-field',
@@ -124,7 +122,7 @@ export const useCustomFieldStore = (useWindow = false) => {
 
               notificationStore.showNotification({
                 type: 'success',
-                message: global.t('settings.custom_fields.added_message'),
+                message: t('settings.custom_fields.added_message'),
               })
               resolve(response)
             })
@@ -160,7 +158,7 @@ export const useCustomFieldStore = (useWindow = false) => {
 
               notificationStore.showNotification({
                 type: 'success',
-                message: global.t('settings.custom_fields.updated_message'),
+                message: t('settings.custom_fields.updated_message'),
               })
               resolve(response)
             })
@@ -186,12 +184,12 @@ export const useCustomFieldStore = (useWindow = false) => {
               if (response.data.error) {
                 notificationStore.showNotification({
                   type: 'error',
-                  message: global.t('settings.custom_fields.already_in_use'),
+                  message: t('settings.custom_fields.already_in_use'),
                 })
               } else {
                 notificationStore.showNotification({
                   type: 'success',
-                  message: global.t('settings.custom_fields.deleted_message'),
+                  message: t('settings.custom_fields.deleted_message'),
                 })
               }
               resolve(response)
@@ -200,7 +198,7 @@ export const useCustomFieldStore = (useWindow = false) => {
               handleError(err)
               // notificationStore.showNotification({
               //   type: 'error',
-              //   message: global.t('settings.custom_fields.already_in_use'),
+              //   message: t('settings.custom_fields.already_in_use'),
               // })
               reject(err)
             })

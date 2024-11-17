@@ -40,19 +40,22 @@
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue'
+import { ref, onMounted, watch } from 'vue'
+import { loadLocale, locale } from '@/scripts/i18n'
 import { useInstallationStore } from '@/scripts/admin/stores/installation.js'
-
-const { global } = window.i18n
 
 const emit = defineEmits(['next'])
 
 let isFetchingInitialData = ref(false)
 let isSaving = ref(false)
 let languages = ref([])
-let currentLanguage = 'en'
+let currentLanguage = ref(locale.value)
 
 const installationStore = useInstallationStore()
+
+watch(locale, (newLocale) => {
+  currentLanguage.value = newLocale
+})
 
 onMounted(() => {
   getLanguages()
@@ -75,10 +78,8 @@ function next() {
   isSaving.value = false
 }
 
-function changeLanguage(event){
-  if(typeof global.locale !== 'string') {
-    global.locale.value = event
-  }
+function changeLanguage(event) {
+  loadLocale(event);
 }
 </script>
 

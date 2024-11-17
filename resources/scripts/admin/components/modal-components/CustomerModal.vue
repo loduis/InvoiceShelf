@@ -516,7 +516,7 @@ const rules = computed(() => {
         t('validation.required'),
         requiredIf(
           customerStore.currentCustomer.enable_portal == true &&
-            !customerStore.currentCustomer.password_added
+          !customerStore.currentCustomer.password_added
         )
       ),
       minLength: helpers.withMessage(

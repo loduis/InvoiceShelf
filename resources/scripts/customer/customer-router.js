@@ -18,7 +18,7 @@ export default [
   {
     path: '/:company/customer',
     component: LayoutLogin,
-    meta: { redirectIfAuthenticated: true },
+    meta: { redirectIfAuthenticated: true, isCustomer: true },
     children: [
       {
         path: '',
@@ -39,12 +39,12 @@ export default [
         component: ResetPassword,
         name: 'customer.reset-password',
       },
-    ],
+    ]
   },
   {
     path: '/:company/customer',
     component: LayoutBasic,
-    meta: { requiresAuth: true },
+    meta: { requiresAuth: true, isCustomer: true },
     children: [
       {
         path: 'dashboard',

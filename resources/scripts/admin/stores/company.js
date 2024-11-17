@@ -1,12 +1,12 @@
 import axios from 'axios'
 import { defineStore } from 'pinia'
+import { t } from '@/scripts/i18n'
 import { useNotificationStore } from '@/scripts/stores/notification'
 import { handleError } from '@/scripts/helpers/error-handling'
-import Ls from '@/scripts/services/ls'
+
 
 export const useCompanyStore = (useWindow = false) => {
   const defineStoreFunc = useWindow ? window.pinia.defineStore : defineStore
-  const { global } = window.i18n
 
   return defineStoreFunc({
     id: 'company',
@@ -47,7 +47,7 @@ export const useCompanyStore = (useWindow = false) => {
 
               notificationStore.showNotification({
                 type: 'success',
-                message: global.t('settings.company_info.updated_message'),
+                message: t('settings.company_info.updated_message'),
               })
 
               this.selectedCompany = response.data.data
@@ -83,7 +83,7 @@ export const useCompanyStore = (useWindow = false) => {
               const notificationStore = useNotificationStore()
               notificationStore.showNotification({
                 type: 'success',
-                message: global.t('company_switcher.created_message'),
+                message: t('company_switcher.created_message'),
               })
               resolve(response)
             })
@@ -154,7 +154,7 @@ export const useCompanyStore = (useWindow = false) => {
 
                 notificationStore.showNotification({
                   type: 'success',
-                  message: global.t(message),
+                  message: t(message),
                 })
               }
 

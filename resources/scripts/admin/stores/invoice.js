@@ -2,6 +2,7 @@ import axios from 'axios'
 import moment from 'moment'
 import Guid from 'guid'
 import _ from 'lodash'
+import { t } from '@/scripts/i18n'
 import { defineStore } from 'pinia'
 import { useRoute } from 'vue-router'
 import { handleError } from '@/scripts/helpers/error-handling'
@@ -18,7 +19,6 @@ import { useUserStore } from './user'
 
 export const useInvoiceStore = (useWindow = false) => {
   const defineStoreFunc = useWindow ? window.pinia.defineStore : defineStore
-  const { global } = window.i18n
   const notificationStore = useNotificationStore()
 
   return defineStoreFunc({
@@ -198,7 +198,7 @@ export const useInvoiceStore = (useWindow = false) => {
             .then((response) => {
               notificationStore.showNotification({
                 type: 'success',
-                message: global.t('invoices.invoice_sent_successfully'),
+                message: t('invoices.invoice_sent_successfully'),
               })
               resolve(response)
             })
@@ -218,7 +218,7 @@ export const useInvoiceStore = (useWindow = false) => {
 
               notificationStore.showNotification({
                 type: 'success',
-                message: global.t('invoices.created_message'),
+                message: t('invoices.created_message'),
               })
 
               resolve(response)
@@ -242,7 +242,7 @@ export const useInvoiceStore = (useWindow = false) => {
 
               notificationStore.showNotification({
                 type: 'success',
-                message: global.t('invoices.deleted_message', 1),
+                message: t('invoices.deleted_message', 1),
               })
               resolve(response)
             })
@@ -268,7 +268,7 @@ export const useInvoiceStore = (useWindow = false) => {
 
               notificationStore.showNotification({
                 type: 'success',
-                message: global.tc('invoices.deleted_message', 2),
+                message: tc('invoices.deleted_message', 2),
               })
               resolve(response)
             })
@@ -291,7 +291,7 @@ export const useInvoiceStore = (useWindow = false) => {
 
               notificationStore.showNotification({
                 type: 'success',
-                message: global.t('invoices.updated_message'),
+                message: t('invoices.updated_message'),
               })
 
               resolve(response)
@@ -310,7 +310,7 @@ export const useInvoiceStore = (useWindow = false) => {
             .then((response) => {
               notificationStore.showNotification({
                 type: 'success',
-                message: global.t('invoices.cloned_successfully'),
+                message: t('invoices.cloned_successfully'),
               })
               resolve(response)
             })
@@ -336,7 +336,7 @@ export const useInvoiceStore = (useWindow = false) => {
 
               notificationStore.showNotification({
                 type: 'success',
-                message: global.t('invoices.mark_as_sent_successfully'),
+                message: t('invoices.mark_as_sent_successfully'),
               })
               resolve(response)
             })

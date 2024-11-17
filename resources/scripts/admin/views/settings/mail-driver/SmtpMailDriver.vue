@@ -123,7 +123,7 @@
         <BaseInput
           v-model.trim="mailDriverStore.smtpConfig.from_mail"
           :content-loading="isFetchingInitialData"
-          type="text"
+          type="email"
           name="from_mail"
           :invalid="v$.smtpConfig.from_mail.$error"
           @input="v$.smtpConfig.from_mail.$touch()"
@@ -204,7 +204,7 @@ const mailDriverStore = useMailDriverStore()
 const { t } = useI18n()
 
 let isShowPassword = ref(false)
-const encryptions = reactive(['none','tls', 'ssl', 'starttls'])
+const encryptions = reactive(['none', 'tls', 'ssl', 'starttls'])
 
 const getInputType = computed(() => {
   if (isShowPassword.value) {

@@ -20,6 +20,7 @@
 
 <script>
 import { ref } from 'vue'
+import { loadLocale, locale } from '@/scripts/i18n'
 import Step0SetLanguage from './Step0SetLanguage.vue'
 import Step1RequirementsCheck from './Step1RequirementsCheck.vue'
 import Step2PermissionCheck from './Step2PermissionCheck.vue'
@@ -52,7 +53,6 @@ export default {
 
     const router = useRouter()
     const installationStore = useInstallationStore()
-    const { global } = window.i18n
 
     checkCurrentProgress()
 
@@ -64,8 +64,10 @@ export default {
         return
       }
 
-      if(typeof res.data.profile_language === 'string') {
-        global.locale.value = res.data.profile_language
+      const lang = res.data.profile_language;
+
+      if (typeof lang === 'string' && lang !== locale.value) {
+        await loadLocale(lang)
       }
 
       let dbstep = parseInt(res.data.profile_complete)
@@ -105,7 +107,7 @@ export default {
       }
     }
 
-    function onNavClick(e) {}
+    function onNavClick(e) { }
 
     function getTickImage() {
       const imgUrl = new URL('$images/logo.png', import.meta.url)

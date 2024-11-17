@@ -1,3 +1,4 @@
+import { t as translate } from '@/scripts/i18n'
 import { useAuthStore } from '@/scripts/admin/stores/auth'
 import { useNotificationStore } from '@/scripts/stores/notification'
 
@@ -64,7 +65,7 @@ export const showError = (error) => {
     case 'payments_attached':
       showToaster('settings.payment_modes.payments_attached')
       break
-    
+
     case 'expenses_attached':
       showToaster('settings.payment_modes.expenses_attached')
       break
@@ -196,11 +197,10 @@ export const showError = (error) => {
 }
 
 export const showToaster = (msg, t = true) => {
-  const { global } = window.i18n
   const notificationStore = useNotificationStore()
 
   notificationStore.showNotification({
     type: 'error',
-    message: t ? global.t(msg) : msg,
+    message: t ? translate(msg) : msg,
   })
 }

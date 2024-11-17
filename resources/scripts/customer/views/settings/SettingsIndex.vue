@@ -67,6 +67,7 @@ import BaseList from '@/scripts/components/list/BaseList.vue'
 import BaseListItem from '@/scripts/components/list/BaseListItem.vue'
 import { OfficeBuildingIcon, UserIcon } from '@heroicons/vue/outline'
 import { useGlobalStore } from '@/scripts/customer/stores/global'
+import i18n from '@/scripts/i18n'
 import { useI18n } from 'vue-i18n'
 const { t } = useI18n()
 
@@ -82,7 +83,6 @@ const companySlug = computed(() => {
 })
 
 // local state
-const { global } = window.i18n
 let currentSetting = ref({})
 let activeIndex = ref()
 const menuItems = reactive([

@@ -93,7 +93,7 @@
           v-model.trim="sesConfig.from_mail"
           :invalid="v$.sesConfig.from_mail.$error"
           :content-loading="isFetchingInitialData"
-          type="text"
+          type="email"
           name="from_mail"
           @input="v$.sesConfig.from_mail.$touch()"
         />

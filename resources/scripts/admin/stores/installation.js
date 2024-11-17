@@ -5,7 +5,6 @@ import { handleError } from '@/scripts/helpers/error-handling'
 
 export const useInstallationStore = (useWindow = false) => {
   const defineStoreFunc = useWindow ? window.pinia.defineStore : defineStore
-  const { global } = window.i18n
   const companyStore = useCompanyStore()
 
   return defineStoreFunc({

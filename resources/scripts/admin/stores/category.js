@@ -1,11 +1,11 @@
 import axios from 'axios'
 import { defineStore } from 'pinia'
+import { t } from '@/scripts/i18n'
 import { useNotificationStore } from '@/scripts/stores/notification'
 import { handleError } from '@/scripts/helpers/error-handling'
 
 export const useCategoryStore = (useWindow = false) => {
   const defineStoreFunc = useWindow ? window.pinia.defineStore : defineStore
-  const { global } = window.i18n
 
   return defineStoreFunc({
     id: 'category',
@@ -64,7 +64,7 @@ export const useCategoryStore = (useWindow = false) => {
               const notificationStore = useNotificationStore()
               notificationStore.showNotification({
                 type: 'success',
-                message: global.t('settings.expense_category.created_message'),
+                message: t('settings.expense_category.created_message'),
               })
               resolve(response)
             })
@@ -88,7 +88,7 @@ export const useCategoryStore = (useWindow = false) => {
                 const notificationStore = useNotificationStore()
                 notificationStore.showNotification({
                   type: 'success',
-                  message: global.t(
+                  message: t(
                     'settings.expense_category.updated_message'
                   ),
                 })
@@ -114,7 +114,7 @@ export const useCategoryStore = (useWindow = false) => {
               const notificationStore = useNotificationStore()
               notificationStore.showNotification({
                 type: 'success',
-                message: global.t('settings.expense_category.deleted_message'),
+                message: t('settings.expense_category.deleted_message'),
               })
               resolve(response)
             })
