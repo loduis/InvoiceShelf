@@ -31,7 +31,7 @@ const LOADED = SUPPORTED_LOCALES.reduce((acc, locale) => {
 }, {})
 
 async function load(locale) {
-  const { default: messages} = await import(`../../../lang/${locale}.json`);
+  const { default: messages} = await import(`../../../lang/${locale}.yml`);
   return messages;
 }
 
