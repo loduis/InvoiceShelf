@@ -696,6 +696,10 @@ expenses:
     category: Κατηγορία "Κατηγορίες
     select_a_category: Επιλέξτε μια κατηγορία
 login:
+  title: Simple Invoicing for Individuals Small Businesses
+  description: >-
+    InvoiceShelf helps you track expenses, record payments & generate beautiful
+    invoices & estimates.
   email: Ηλεκτρονική διεύθυνση
   password: Κωδικός
   forgot_password: Ξεχάσατε τον κωδικό;

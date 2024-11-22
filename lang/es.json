@@ -697,8 +697,7 @@
     "password_reset_successfully": "Contraseña reestablecida con éxito",
     "enter_email": "Escriba el correo electrónico",
     "enter_password": "Escriba la contraseña",
-    "retype_password": "Reescriba la contraseña",
-    "copyright_text": "Copyright @ IDEOLOGIX MEDIA DOOEL."
+    "retype_password": "Reescriba la contraseña"
   },
   "modules": {
     "buy_now": "Comprar ahora",

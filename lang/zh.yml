@@ -672,6 +672,10 @@ expenses:
     category: 分類 | 分類
     select_a_category: 選擇一個分類
 login:
+  title: Simple Invoicing for Individuals Small Businesses
+  description: >-
+    InvoiceShelf helps you track expenses, record payments & generate beautiful
+    invoices & estimates.
   email: 電郵
   password: 密碼
   forgot_password: 忘記密碼？

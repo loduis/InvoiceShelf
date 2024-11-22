@@ -683,6 +683,10 @@ expenses:
     category: فئة | فئات
     select_a_category: اختر الفئة
 login:
+  title: Simple Invoicing for Individuals Small Businesses
+  description: >-
+    InvoiceShelf helps you track expenses, record payments & generate beautiful
+    invoices & estimates.
   email: البريد الإلكتروني
   password: كلمة المرور
   forgot_password: نسيت كلمة المرور؟

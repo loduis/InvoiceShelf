@@ -687,6 +687,10 @@ expenses:
     category: श्रेणी | श्रेणियाँ
     select_a_category: एक श्रेणी चुनें
 login:
+  title: Simple Invoicing for Individuals Small Businesses
+  description: >-
+    InvoiceShelf helps you track expenses, record payments & generate beautiful
+    invoices & estimates.
   email: ईमेल
   password: पासवर्ड
   forgot_password: पासवर्ड भूल गए?

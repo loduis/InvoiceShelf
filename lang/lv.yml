@@ -678,6 +678,10 @@ expenses:
     category: Kategorija | Kategorijas
     select_a_category: Izvēlieties kategoriju
 login:
+  title: Simple Invoicing for Individuals Small Businesses
+  description: >-
+    InvoiceShelf helps you track expenses, record payments & generate beautiful
+    invoices & estimates.
   email: E-pasts
   password: Parole
   forgot_password: Aizmirsi paroli?

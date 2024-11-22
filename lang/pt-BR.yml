@@ -3,22 +3,22 @@ navigation:
   customers: Clientes
   items: Itens
   invoices: Faturas
-  recurring-invoices: Faturas Recorrentes
+  recurring-invoices: Recurring Invoices
   expenses: Despesas
   estimates: Orçamentos
   payments: Pagamentos
   reports: Relatórios
   settings: Configurações
   logout: Encerrar sessão
-  users: Usuários
-  modules: Navegação → módulos
+  users: Users
+  modules: Modules
 general:
-  add_company: Adicionar Empresa
+  add_company: Add Company
   view_pdf: Ver PDF
-  copy_pdf_url: Copiar URL do PDF
+  copy_pdf_url: Copy PDF Url
   download_pdf: Baixar PDF
   save: Salvar
-  create: Criar
+  create: Create
   cancel: Cancelar
   update: Atualizar
   deselect: Desmarcar
@@ -27,20 +27,20 @@ general:
   to_date: Até a Data
   from: De
   to: Para
-  ok: Geral → Ok
-  'yes': Sim
-  'no': Não
+  ok: Ok
+  'yes': 'Yes'
+  'no': 'No'
   sort_by: Ordenar por
   ascending: Crescente
   descending: Descendente
   subject: Sujeita
   body: Corpo
   message: Mensagem
-  send: Enviar
-  preview: Pré-visualizar
+  send: Send
+  preview: Preview
   go_back: Voltar
-  back_to_login: Voltar ao Login?
-  home: Painel
+  back_to_login: Voltar ao Login
+  home: Home
   filter: Filtrar
   delete: Excluir
   edit: Editar
@@ -63,8 +63,8 @@ general:
   sent: Enviado
   all: Todos
   select_all: Selecionar tudo
-  select_template: Selecionar modelo
-  choose_file: Clique aqui para escolher um arquivo
+  select_template: Select Template
+  choose_file: Escolha um arquivo.
   choose_template: Escolha um modelo
   choose: Escolher
   remove: Excluir
@@ -74,7 +74,7 @@ general:
   are_you_sure: Tem certeza?
   list_is_empty: Lista está vazia.
   no_tax_found: Imposto não encontrado!
-  four_zero_four: Geral → 404
+  four_zero_four: '404'
   you_got_lost: Ops! Se perdeu!
   go_home: Ir para Home
   test_mail_conf: Testar configuração de email
@@ -87,18 +87,18 @@ general:
   street_2: 'Rua # 2'
   action_failed: 'Ação: Falhou'
   retry: Atualização falhou
-  choose_note: Escolher Nota
-  no_note_found: Nenhuma Nota Encontrada
-  insert_note: Inserir Nota
-  copied_pdf_url_clipboard: URL do PDF copiado para área de transferência!
-  copied_url_clipboard: Geral → Copiado para área de transferência!
-  docs: Documentos
-  do_you_wish_to_continue: Você deseja continuar?
-  note: Observação
-  pay_invoice: Geral → pagar cobrança
-  login_successfully: Geral → logado com sucesso!
-  logged_out_successfully: Geral → saiu com sucesso
-  mark_as_default: Geral → Marcar como padrão
+  choose_note: Choose Note
+  no_note_found: No Note Found
+  insert_note: Insert Note
+  copied_pdf_url_clipboard: Copied PDF url to clipboard!
+  copied_url_clipboard: Copied url to clipboard!
+  docs: Docs
+  do_you_wish_to_continue: Do you wish to continue?
+  note: Note
+  pay_invoice: Pay Invoice
+  login_successfully: Logged in successfully!
+  logged_out_successfully: Logged out successfully
+  mark_as_default: Mark as default
   no_data_found: No data found
   pagination:
     previous: Previous
@@ -118,10 +118,10 @@ general:
 dashboard:
   select_year: Selecione Ano
   cards:
-    due_amount: Total Vencido
-    customers: Customer | Customers
-    invoices: Invoice | Invoices
-    estimates: Estimate | Estimates
+    due_amount: Montante devido
+    customers: Clientes
+    invoices: Faturas
+    estimates: Orçamentos
     payments: Payment | Payments
   chart_info:
     total_sales: Vendas
@@ -133,7 +133,7 @@ dashboard:
     title: Vendas e Despesas
   recent_invoices_card:
     title: Faturas vencidas
-    due_on: Vencido em
+    due_on: vencido em
     customer: Cliente
     amount_due: Valor Devido
     actions: Ações
@@ -149,80 +149,82 @@ tax_types:
   name: Nome
   description: Descrição
   percent: Porcentagem
-  compound_tax: Imposto Composto
+  compound_tax: Imposto compuesto
 global_search:
-  search: Buscar...
-  customers: Clientes
-  users: Usuários
-  no_results_found: Nenhum Resultado Encontrado
+  search: Search...
+  customers: Customers
+  users: Users
+  no_results_found: No Results Found
 company_switcher:
-  label: TROCAR EMPRESA
-  no_results_found: Nenhum Resultado Encontrado
-  add_new_company: Adicionar nova empresa
-  new_company: Nova Empresa
-  created_message: Empresa criada com sucesso
+  label: SWITCH COMPANY
+  no_results_found: No Results Found
+  add_new_company: Add new company
+  new_company: New company
+  created_message: Company created successfully
 dateRange:
-  today: Hoje
-  this_week: Esta Semana
-  this_month: Este mês
-  this_quarter: Este trimestre
-  this_year: Este ano
-  previous_week: Semana anterior
-  previous_month: Mês anterior
-  previous_quarter: Trimestre anterior
-  previous_year: Ano Anterior
-  custom: Personalizado
+  today: Today
+  this_week: This Week
+  this_month: This Month
+  this_quarter: This Quarter
+  this_year: This Year
+  previous_week: Previous Week
+  previous_month: Previous Month
+  previous_quarter: Previous Quarter
+  previous_year: Previous Year
+  custom: Custom
 customers:
   title: Clientes
-  prefix: Prefixo
+  prefix: Prefix
   tax_id: Tax ID
   add_customer: Adicionar cliente
   contacts_list: Lista de clientes
   name: Nome
-  mail: Email | Emails
-  statement: Declaração
+  mail: Mail | Mails
+  statement: Statement
   display_name: Nome de exibição
   primary_contact_name: Nome do contato principal
   contact_name: Nome de Contato
   amount_due: Valor Devido
-  email: Clientes → E-mail
+  email: Email
   address: Endereço
   phone: Telefone
   website: Site
-  overview: Visão Geral
-  invoice_prefix: Prefixo da fatura
-  estimate_prefix: Orçamento Prefixo
-  payment_prefix: Pagamento Prefixo
-  enable_portal: Habilitar Portal
+  overview: Overview
+  invoice_prefix: Invoice Prefix
+  estimate_prefix: Estimate Prefix
+  payment_prefix: Payment Prefix
+  enable_portal: Enable Portal
   country: Pais
   state: Estado
   city: Cidade
-  zip_code: CEP
-  added_on: Adicionado em
+  zip_code: Código postal
+  added_on: Adicionado
   action: Ação
   password: Senha
-  confirm_password: Confirmar Senha
+  confirm_password: Confirm Password
   street_number: Número
   primary_currency: Moeda principal
-  description: Descrição
+  description: Description
   add_new_customer: Adicionar novo cliente
   save_customer: Salvar cliente
   update_customer: Atualizar cliente
   customer: Cliente | Clientes
-  new_customer: Novo Cliente
-  edit_customer: Editar Cliente
-  basic_info: Informação Básica
-  portal_access: Clientes → Acessar portal
-  portal_access_text: Clientes→ Texto do portal de acesso?
-  portal_access_url: Portal de serviço ao consumidor URL
-  portal_access_url_help: Copie e encaminhe o link para seu cliente para fornecer acesso.
+  new_customer: Novo cliente
+  edit_customer: Editar cliente
+  basic_info: Informação basica
+  portal_access: Portal Access
+  portal_access_text: Would you like to allow this customer to login to the Customer Portal?
+  portal_access_url: Customer Portal Login URL
+  portal_access_url_help: >-
+    Please copy & forward the above given URL to your customer for providing
+    access.
   billing_address: Endereço de cobrança
   shipping_address: Endereço de entrega
-  copy_billing_address: Copiar Endereço de Faturamento
+  copy_billing_address: Cópia de faturamento
   no_customers: Ainda não há clientes!
   no_customers_found: Clientes não encontrados!
-  no_contact: Nenhum contato
-  no_contact_name: Sem nome de contato
+  no_contact: No contact
+  no_contact_name: No contact name
   list_of_customers: Esta seção conterá a lista de clientes.
   primary_display_name: Nome de exibição principal
   select_currency: Selecione o tipo de moeda
@@ -233,14 +235,14 @@ customers:
   phone_number: Número de telefone
   create_date: Criar Data
   confirm_delete: >-
-    Você não poderá recuperar este cliente e todas as faturas, orçamentos e
+    Você não poderá recuperar este cliente e todas as faturas, estimativas e
     pagamentos relacionados. | Você não poderá recuperar esses clientes e todas
     as faturas, estimativas e pagamentos relacionados.
   created_message: Cliente criado com sucesso
   updated_message: Cliente atualizado com sucesso
-  address_updated_message: Informação de endereço atualizada com sucesso
+  address_updated_message: Address Information Updated succesfully
   deleted_message: Cliente excluído com sucesso | Clientes excluídos com sucesso
-  edit_currency_not_allowed: Não é possível alterar a moeda depois de criar transações.
+  edit_currency_not_allowed: Cannot change currency once transactions created.
 items:
   title: Itens
   items_list: Lista de Itens
@@ -250,7 +252,7 @@ items:
   added_on: Adicionado
   price: Preço
   date_of_creation: Data de criação
-  not_selected: Nenhum item selecionado
+  not_selected: No item selected
   action: Ação
   add_item: Adicionar item
   save_item: Salvar item
@@ -259,24 +261,24 @@ items:
   add_new_item: Adicionar novo item
   new_item: Novo item
   edit_item: Editar item
-  no_items: Ainda não existe itens!
+  no_items: Ainda não existe itens
   list_of_items: Esta seção conterá a lista de itens.
-  select_a_unit: selecionar unidade
+  select_a_unit: Seleciona unidade
   taxes: Impostos
-  item_attached_message: Não é possível excluir um item que já está em uso
+  item_attached_message: Não é possível excluir um item que já está em uso.
   confirm_delete: Você não poderá recuperar este item | Você não poderá recuperar esses itens
   created_message: Item criado com sucesso
   updated_message: Item atualizado com sucesso
   deleted_message: Item excluído com sucesso | Itens Excluídos com sucesso
 estimates:
   title: Orçamentos
-  accept_estimate: Aceitar estimativa
-  reject_estimate: Rejeitar estimativa
+  accept_estimate: Accept Estimate
+  reject_estimate: Reject Estimate
   estimate: Orçamento | Orçamentos
   estimates_list: Lista de orçamentos
-  days: '{days} Dias'
-  months: '{months} Mês'
-  years: '{years} Ano'
+  days: '{dias} dias'
+  months: '{meses} Mês'
+  years: '{Anos} Ano'
   all: Todos
   paid: Pago
   unpaid: Não pago
@@ -295,9 +297,9 @@ estimates:
   date: Data
   due_date: Data de Vencimento
   expiry_date: Data de expiração
-  status: Estado
+  status: Status
   add_tax: Adicionar Imposto
-  amount: Valor
+  amount: Montante
   action: Ação
   notes: Observações
   tax: Imposto
@@ -305,15 +307,15 @@ estimates:
   convert_to_invoice: Converter em fatura
   mark_as_sent: Marcar como enviado
   send_estimate: Enviar orçamento
-  resend_estimate: Reenviar Orçamento
+  resend_estimate: Resend Estimate
   record_payment: Registro de pago
   add_estimate: Adicionar orçamento
   save_estimate: Salvar Orçamento
-  cloned_successfully: Estimate cloned successfully
-  clone_estimate: Clone Estimate
-  confirm_clone: This Estimate will be cloned into a new Estimate
-  confirm_conversion: Esse orçamento será usado para criar uma nova Fatura.
-  conversion_message: Fatura criada com sucesso
+  cloned_successfully: Orçamento clonado com sucesso
+  clone_estimate: Clonar orçamento
+  confirm_clone: Este orçamento será clonado em um novo orçamento
+  confirm_conversion: Deseja converter este orçamento em uma fatura?
+  conversion_message: Converção realizada com sucesso
   confirm_send_estimate: Este orçamento será enviado por email ao cliente
   confirm_mark_as_sent: Este orçamento será marcado como enviado
   confirm_mark_as_accepted: Este orçamento será marcado como Aceito
@@ -324,20 +326,20 @@ estimates:
   errors:
     required: Campo obrigatório
   accepted: Aceito
-  rejected: Rejeitado
-  expired: Expirado
+  rejected: Rejected
+  expired: Expired
   sent: Enviado
   draft: Rascunho
-  viewed: Visto
+  viewed: Viewed
   declined: Rejeitado
   new_estimate: Novo orçamento
   add_new_estimate: Adicionar novo orçamento
   update_Estimate: Atualizar orçamento
   edit_estimate: Editar orçamento
-  items: itens
+  items: artículos
   Estimate: Orçamento | Orçamentos
   add_new_tax: Adicionar novo imposto
-  no_estimates: Ainda não há orçamentos ainda!
+  no_estimates: Ainda não há orcamentos
   list_of_estimates: Esta seção contém a lista de orçamentos.
   mark_as_rejected: Marcar como rejeitado
   mark_as_accepted: Marcar como aceito
@@ -347,7 +349,7 @@ estimates:
   created_message: Orçamento criado com sucesso
   updated_message: Orçamento atualizado com sucesso
   deleted_message: Orçamento excluído com sucesso | Orçamentos excluídos com sucesso
-  something_went_wrong: algo deu errado
+  something_went_wrong: Algo deu errado
   item:
     title: Titulo do item
     description: Descrição
@@ -358,31 +360,33 @@ estimates:
     total_discount: Desconto total
     sub_total: Subtotal
     tax: Imposto
-    amount: Valor
+    amount: Montante
     select_an_item: Escreva ou clique para selecionar um item
-    type_item_description: Descrição do Item (opcional)
-  mark_as_default_estimate_template_description: Se ativado, o modelo selecionado será usado para novas estimativas.
+    type_item_description: Tipo Item Descrição (opcional)
+  mark_as_default_estimate_template_description: >-
+    If enabled, the selected template will be automatically selected for new
+    estimates.
 invoices:
   title: Faturas
-  download: Baixar
-  pay_invoice: Pagar fatura
+  download: Download
+  pay_invoice: Pay Invoice
   invoices_list: Lista de faturas
-  invoice_information: Informações da fatura
-  days: '{days} dias'
-  months: '{months} Mês'
-  years: '{years} Ano'
+  invoice_information: Invoice Information
+  days: '{dias} dias'
+  months: '{meses} Mês'
+  years: '{anos} Ano'
   all: Todas
   paid: Paga
   unpaid: Não Paga
-  viewed: Visualizado
-  overdue: Atrasado
-  completed: Concluído
+  viewed: Viewed
+  overdue: Overdue
+  completed: Completed
   customer: CLIENTE
   paid_status: STATUS PAGAMENTO
-  ref_no: NÚM. REFERÊNCIA
+  ref_no: REFERÊNCIA
   number: NÚMERO
   amount_due: VALOR DEVIDO
-  partially_paid: Parcialmente Pago
+  partially_paid: Parcialmente pago
   total: Total
   discount: Desconto
   sub_total: Subtotal
@@ -390,25 +394,25 @@ invoices:
   invoice_number: Número da fatura
   ref_number: Referência
   contact: Contato
-  add_item: Adicionar um Item
+  add_item: Adicionar um item
   date: Data
   due_date: Data de Vencimento
-  status: Estado
+  status: Status
   add_tax: Adicionar imposto
-  amount: Valor
+  amount: Montante
   action: Ação
   notes: Observações
   view: Ver
   send_invoice: Enviar Fatura
-  resend_invoice: Reenviar Fatura
+  resend_invoice: Resend Invoice
   invoice_template: Modelo da Fatura
-  conversion_message: Fatura clonada com sucesso
+  conversion_message: Invoice cloned successful
   template: Modelo
   mark_as_sent: Marcar como enviada
   confirm_send_invoice: Esta fatura será enviada por e-mail ao cliente
   invoice_mark_as_sent: Esta fatura será marcada como enviada
-  confirm_mark_as_accepted: Esta fatura será marcada como Aceita
-  confirm_mark_as_rejected: Esta fatura será marcada como Rejeitado
+  confirm_mark_as_accepted: This invoice will be marked as Accepted
+  confirm_mark_as_rejected: This invoice will be marked as Rejected
   confirm_send: Esta fatura será enviada por e-mail ao cliente
   invoice_date: Data da Fatura
   record_payment: Gravar Pagamento
@@ -420,8 +424,8 @@ invoices:
   update_invoice: Atualizar Fatura
   add_new_tax: Adicionar novo Imposto
   no_invoices: Ainda não há faturas!
-  mark_as_rejected: Marcada como rejeitada
-  mark_as_accepted: Marcar como aceita
+  mark_as_rejected: Mark as rejected
+  mark_as_accepted: Mark as accepted
   list_of_invoices: Esta seção conterá a lista de faturas.
   select_invoice: Selecionar Fatura
   no_matching_invoices: Não há faturas correspondentes!
@@ -438,14 +442,15 @@ invoices:
     discount: Desconto
     total: Total
     total_discount: Desconto Total
-    sub_total: Subtotal
+    sub_total: SubTotal
     tax: Imposto
-    amount: Valor
+    amount: Montante
     select_an_item: Digite ou clique para selecionar um item
-    type_item_description: Descrição do item (opcional)
+    type_item_description: Tipo Descrição do item (opcional)
   payment_attached_message: >-
-    Uma das faturas selecionadas já possui um pagamento anexado. Certifique-se
-    de excluir os pagamentos anexados primeiro, para continuar com a exclusão
+    One of the selected invoices already have a payment attached to it. Make
+    sure to delete the attached payments first in order to go ahead with the
+    removal
   confirm_delete: >-
     Você não poderá recuperar esta fatura | Você não poderá recuperar essas
     faturas
@@ -453,85 +458,89 @@ invoices:
   updated_message: Fatura atualizada com sucesso
   deleted_message: Fatura excluída com sucesso | Faturas excluídas com sucesso
   marked_as_sent_message: Fatura marcada como enviada com sucesso
-  something_went_wrong: algo deu errado
+  something_went_wrong: Algo deu errado
   invalid_due_amount_message: >-
     O valor total da fatura não pode ser menor que o valor total pago para esta
     fatura. Atualize a fatura ou exclua os pagamentos associados para continuar.
-  mark_as_default_invoice_template_description: Se ativado, o modelo selecionado será usado para novas faturas.
+  mark_as_default_invoice_template_description: >-
+    If enabled, the selected template will be automatically selected for new
+    invoices.
 recurring_invoices:
-  title: Faturas Recorrentes
-  invoices_list: Lista de Faturas Recorrentes
-  days: '{days} Dias'
-  months: '{months} Mês'
-  years: '{years} Ano'
-  all: Todos
-  paid: Pago
-  unpaid: Não pago
-  viewed: Visualizado
-  overdue: Atrasado
-  active: Ativo
-  completed: Concluído
-  customer: CLIENTE
-  paid_status: STATUS PAGAMENTO
-  ref_no: NÚM. REFERÊNCIA
-  number: NÚMERO
-  amount_due: VALOR DEVIDO
-  partially_paid: Parcialmente pago
+  title: Recurring Invoices
+  invoices_list: Recurring Invoices List
+  days: '{days} Days'
+  months: '{months} Month'
+  years: '{years} Year'
+  all: All
+  paid: Paid
+  unpaid: Unpaid
+  viewed: Viewed
+  overdue: Overdue
+  active: Active
+  completed: Completed
+  customer: CUSTOMER
+  paid_status: PAID STATUS
+  ref_no: REF NO.
+  number: NUMBER
+  amount_due: AMOUNT DUE
+  partially_paid: Partially Paid
   total: Total
-  discount: Desconto
-  sub_total: Subtotal
-  invoice: Fatura recorrente | Faturas recorrentes
-  invoice_number: Número de fatura recorrente
-  next_invoice_date: Data da próxima fatura
-  ref_number: Núm. Referência
-  contact: Contato
-  add_item: Adicionar um item
-  date: Data
-  limit_by: Até
-  limit_date: Data limite
-  limit_count: Contagem limite
-  count: Contagem
-  status: Estado
-  select_a_status: Selecione um estado
-  working: Funcionando
-  on_hold: Pendente
-  complete: Concluído
-  add_tax: Adicionar taxa
-  amount: Quantidade
-  action: Ação
-  notes: Observações
-  view: Ver
-  basic_info: Informações básicas
-  send_invoice: Enviar fatura recorrente
-  auto_send: Enviar automaticamente
-  resend_invoice: Reenviar fatura recorrente
-  invoice_template: Modelo de fatura recorrente
-  conversion_message: Fatura clonada com sucesso
-  template: Modelo
-  mark_as_sent: Marcar como vista
-  confirm_send_invoice: Essa fatura será enviada ao cliente por e-mail
-  invoice_mark_as_sent: Essa fatura será marcada como vista
-  confirm_send: Essa fatura será enviada ao cliente por e-mail
-  starts_at: Data de início
-  due_date: Vencimento da fatura
-  record_payment: Registro de pagamento
-  add_new_invoice: Adicionar nova fatura
-  update_expense: Atualizar despesa
-  edit_invoice: Editar fatura
-  new_invoice: Nova fatura
-  send_automatically: Enviar automaticamente
-  send_automatically_desc: Ative se quiser que a fatura seja enviada automaticamente para o cliente.
-  save_invoice: Salvar fatura
-  update_invoice: Atualizar fatura
-  add_new_tax: Adicionar Novo Imposto
-  no_invoices: Não há faturas recorrentes ainda!
-  mark_as_rejected: Marcar como rejeitada
-  mark_as_accepted: Marcar como aceito
-  list_of_invoices: Esta seção conterá a lista de faturas recorrentes.
-  select_invoice: Selecionar Fatura
-  no_matching_invoices: Não há faturas recorrentes correspondentes!
-  mark_as_sent_successfully: Fatura recorrente marcada como enviada com sucesso
-  invoice_sent_successfully: Fatura enviada com sucesso
+  discount: Discount
+  sub_total: Sub Total
+  invoice: Recurring Invoice | Recurring Invoices
+  invoice_number: Recurring Invoice Number
+  next_invoice_date: Next Invoice Date
+  ref_number: Ref Number
+  contact: Contact
+  add_item: Add an Item
+  date: Date
+  limit_by: Limit by
+  limit_date: Limit Date
+  limit_count: Limit Count
+  count: Count
+  status: Status
+  select_a_status: Select a status
+  working: Working
+  on_hold: On Hold
+  complete: Completed
+  add_tax: Add Tax
+  amount: Amount
+  action: Action
+  notes: Notes
+  view: View
+  basic_info: Basic Info
+  send_invoice: Send Recurring Invoice
+  auto_send: Auto Send
+  resend_invoice: Resend Recurring Invoice
+  invoice_template: Recurring Invoice Template
+  conversion_message: Recurring Invoice cloned successful
+  template: Template
+  mark_as_sent: Mark as sent
+  confirm_send_invoice: This recurring invoice will be sent via email to the customer
+  invoice_mark_as_sent: This recurring invoice will be marked as sent
+  confirm_send: This recurring invoice will be sent via email to the customer
+  starts_at: Start Date
+  due_date: Invoice Due Date
+  record_payment: Record Payment
+  add_new_invoice: Add New Recurring Invoice
+  update_expense: Update Expense
+  edit_invoice: Edit Recurring Invoice
+  new_invoice: New Recurring Invoice
+  send_automatically: Send Automatically
+  send_automatically_desc: >-
+    Enable this, if you would like to send the invoice automatically to the
+    customer when its created.
+  save_invoice: Save Recurring Invoice
+  update_invoice: Update Recurring Invoice
+  add_new_tax: Add New Tax
+  no_invoices: No Recurring Invoices yet!
+  mark_as_rejected: Mark as rejected
+  mark_as_accepted: Mark as accepted
+  list_of_invoices: This section will contain the list of recurring invoices.
+  select_invoice: Select Invoice
+  no_matching_invoices: There are no matching recurring invoices!
+  mark_as_sent_successfully: Recurring Invoice marked as sent successfully
+  invoice_sent_successfully: Recurring Invoice sent successfully
   cloned_successfully: Recurring Invoice cloned successfully
   clone_invoice: Clone Recurring Invoice
   confirm_clone: This recurring invoice will be cloned into a new Recurring Invoice
@@ -595,9 +604,9 @@ payments:
   record_payment: Gravar Pagamento
   customer: Cliente
   date: Data
-  amount: Valor
+  amount: Montante
   action: Ação
-  payment_number: Número de Pagamento
+  payment_number: Número do Pagamento
   payment_mode: Forma de Pagamento
   invoice: Fatura
   note: Observação
@@ -607,20 +616,20 @@ payments:
   view_payment: Ver Pagamento
   add_new_payment: Adicionar novo Pagamento
   send_payment_receipt: Enviar recibo de pagamento
-  send_payment: Enviar Pagamento
+  send_payment: Mande o pagamento
   save_payment: Salvar Pagamento
   update_payment: Atualizar Pagamento
   payment: Pagamento | Pagamentos
-  no_payments: Não há pagamentos ainda!
-  not_selected: Não selecionado
-  no_invoice: Nenhuma fatura
+  no_payments: Ainda sem pagamentos!
+  not_selected: Not selected
+  no_invoice: No invoice
   no_matching_payments: Não há pagamentos correspondentes!
   list_of_payments: Esta seção conterá a lista de pagamentos.
   select_payment_mode: Selecione a forma de pagamento
-  confirm_mark_as_sent: Este orçamento será marcado como enviado
-  confirm_send_payment: Este pagamento será enviado por e-mail para o cliente
-  send_payment_successfully: Pagamento enviado com sucesso
-  something_went_wrong: algo deu errado
+  confirm_mark_as_sent: This estimate will be marked as sent
+  confirm_send_payment: This payment will be sent via email to the customer
+  send_payment_successfully: Payment sent successfully
+  something_went_wrong: something went wrong
   confirm_delete: >-
     Você não poderá recuperar este Pagamento | Você não poderá recuperar esses
     Pagamentos
@@ -632,20 +641,20 @@ payments:
 expenses:
   title: Despesas
   expenses_list: Lista de Despesas
-  select_a_customer: Selecione um cliente
+  select_a_customer: Select a customer
   expense_title: Título
   customer: Cliente
-  currency: Moeda
+  currency: Currency
   contact: Contato
   category: Categoria
   from_date: A partir da Data
   to_date: Até a Data
   expense_date: Data
   description: Descrição
-  receipt: Recibo
-  amount: Valor
+  receipt: Receita
+  amount: Montante
   action: Ação
-  not_selected: Não selecionado
+  not_selected: Not selected
   note: Observação
   category_id: Categoria
   date: Data da Despesa
@@ -653,7 +662,7 @@ expenses:
   add_new_expense: Adicionar Nova Despesa
   save_expense: Salvar Despesa
   update_expense: Atualizar Despesa
-  download_receipt: Baixar Recibo
+  download_receipt: Baixar Receita
   edit_expense: Editar Despesa
   new_expense: Nova Despesa
   expense: Despesa | Despesas
@@ -670,7 +679,7 @@ expenses:
     title: Título
     name: Nome
     description: Descrição
-    amount: Valor
+    amount: Montante
     actions: Ações
     add_category: Adicionar Categoria
     new_category: Nova Categoria
@@ -686,8 +695,8 @@ login:
   forgot_password: Esqueceu a senha?
   or_signIn_with: ou Entre com
   login: Entrar
-  register: Cadastre-se
-  reset_password: Redefinir Senha
+  register: Registre-se
+  reset_password: Resetar Senha
   password_reset_successfully: Senha redefinida com sucesso
   enter_email: Digite email
   enter_password: Digite a senha
@@ -696,7 +705,7 @@ modules:
   buy_now: Buy Now
   install: Install
   price: Price
-  download_zip_file: Baixar arquivo ZIP
+  download_zip_file: Download ZIP file
   unzipping_package: Unzipping Package
   copying_files: Copying Files
   deleting_files: Deleting Unused files
@@ -710,7 +719,7 @@ modules:
   yearly: Yearly
   updated: Updated
   version: Version
-  disable: Desativar
+  disable: Disable
   module_disabled: Module Disabled
   enable: Enable
   module_enabled: Module Enabled
@@ -725,7 +734,9 @@ modules:
   no_reviews_found: There are no reviews for this module yet!
   module_not_purchased: Module Not Purchased
   module_not_found: Module Not Found
-  version_not_supported: This module version doesn't support the current version of InvoiceShelf
+  version_not_supported: >-
+    The minimum required version for this module does not match. Please upgrade
+    your invoiceshelf app to version: {version} to proceed.
   last_updated: Last Updated On
   connect_installation: Connect your installation
   api_token_description: >-
@@ -740,32 +751,32 @@ modules:
   what_you_get: What you get
   sign_up_and_get_token: Sign up & Get Token
 users:
-  title: Usuários
-  users_list: Lista de Usuários
-  name: Nome
-  description: Descrição
-  added_on: Adicionado
-  date_of_creation: Data de criação
-  action: Ação
-  add_user: Adicionar Usuário
-  save_user: Salvar Usuário
-  update_user: Atualizar Usuário
-  user: Usuário | Usuários
-  add_new_user: Adicionar Novo Usuário
-  new_user: Novo Usuário
-  edit_user: Editar Usuário
-  no_users: Nenhum usuário ainda!
-  list_of_users: Esta seção conterá a lista de usuários.
+  title: Users
+  users_list: Users List
+  name: Name
+  description: Description
+  added_on: Added On
+  date_of_creation: Date Of Creation
+  action: Action
+  add_user: Add User
+  save_user: Save User
+  update_user: Update User
+  user: User | Users
+  add_new_user: Add New User
+  new_user: New User
+  edit_user: Edit User
+  no_users: No users yet!
+  list_of_users: This section will contain the list of users.
   email: Email
-  phone: Telefone
-  password: Senha
-  user_attached_message: Não é possível excluir um item que já está em uso
+  phone: Phone
+  password: Password
+  user_attached_message: Cannot delete an item which is already in use
   confirm_delete: >-
-    Você não poderá recuperar este Usuário | Você não poderá recuperar esses
-    Usuários
-  created_message: Usuário criado com sucesso
-  updated_message: Usuário atualizado com sucesso
-  deleted_message: Usuário excluído com sucesso | Usuários excluídos com sucesso
+    You will not be able to recover this User | You will not be able to recover
+    these Users
+  created_message: User created successfully
+  updated_message: User updated successfully
+  deleted_message: User deleted successfully | Users deleted successfully
   select_company_role: Select Role for {company}
   companies: Companies
 reports:
@@ -780,7 +791,7 @@ reports:
   update_report: Atualizar Relatório
   report: Relatório | Relatórios
   profit_loss:
-    profit_loss: Lucro & Perda
+    profit_loss: Perda de lucro
     to_date: Até a Data
     from_date: A partir da Data
     date_range: Selecionar período
@@ -804,7 +815,7 @@ reports:
     invoice: Fatura
     invoice_date: Data da Fatura
     due_date: Data de Vencimento
-    amount: Valor
+    amount: Montante
     contact_name: Nome de Contato
     status: Status
   estimates:
@@ -813,14 +824,14 @@ reports:
     due_date: Data de Vencimento
     estimate_number: Número do Orçamento
     ref_number: Referência
-    amount: Valor
+    amount: Montante
     contact_name: Nome de Contato
     status: Status
   expenses:
     expenses: Despesas
     category: Categoria
     date: Data
-    amount: Valor
+    amount: Montante
     to_date: Até a Data
     from_date: A partir da Data
     date_range: Selecionar período
@@ -835,10 +846,10 @@ settings:
     expense_category: Categorias de Despesas
     update_app: Atualizar Aplicativo
     backup: Backup
-    file_disk: Disco de Arquivos
+    file_disk: File Disk
     custom_fields: Os campos personalizados
-    payment_modes: Meios de Pagamento
-    notes: Observações
+    payment_modes: Payment Modes
+    notes: Notes
     exchange_rate: Exchange Rate
     address_information: Address Information
   address_information:
@@ -847,7 +858,7 @@ settings:
   setting: Configuração | Configurações
   general: Geral
   language: Idioma
-  primary_currency: Moeda Principal
+  primary_currency: Moéda Principal
   timezone: Fuso horário
   date_format: Formato de data
   currencies:
@@ -870,18 +881,18 @@ settings:
   mail:
     host: Host de Email
     port: Porta de Email
-    driver: Driver do email
-    secret: Senha
-    mailgun_secret: Senha Mailgun
+    driver: Mail Driver
+    secret: Segredo
+    mailgun_secret: Mailgun Segredo
     mailgun_domain: Domínio
-    mailgun_endpoint: Endpoint do Mailgun
-    ses_secret: Senha SES
-    ses_key: Chave SES
+    mailgun_endpoint: Mailgun Endpoint
+    ses_secret: SES Segredo
+    ses_key: SES Chave
     password: Senha do Email
     username: Nome de Usuário do Email
     mail_config: Configuração de Email
-    from_name: Nome do Remetente
-    from_mail: Endereço Email do Remetente
+    from_name: Do Nome de Email
+    from_mail: Do Endereço de Email
     encryption: Criptografia de Email
     mail_config_desc: >-
       Abaixo está o formulário para configurar o driver de email para enviar
@@ -921,9 +932,9 @@ settings:
   custom_fields:
     title: Os campos personalizados
     section_description: >-
-      Personalize as suas Faturas, Orçamentos & Recibos de Pagamento com seus
-      próprios campos. Certifique-se de usar os campos adicionais abaixo nos
-      formatos de endereço na página de Configurações de Personalização.
+      Customize your Invoices, Estimates & Payment Receipts with your own
+      fields. Make sure to use the below added fields on the address formats on
+      Customization settings page.
     add_custom_field: Adicionar campo personalizado
     edit_custom_field: Editar campo personalizado
     field_name: Nome do campo
@@ -932,7 +943,7 @@ settings:
     name: Nome
     slug: Slug
     required: Requeridas
-    placeholder: Dica de Preenchimento
+    placeholder: Placeholder
     help_text: Texto de ajuda
     default_value: Valor padrão
     prefix: Prefixo
@@ -942,7 +953,7 @@ settings:
       Digite algum texto para ajudar os usuários a entender a finalidade desse
       campo personalizado.
     suffix: Sufixo
-    'yes': Sim
+    'yes': sim
     'no': Não
     order: Ordem
     custom_field_confirm_delete: Você não poderá recuperar este campo personalizado
@@ -953,7 +964,7 @@ settings:
     add_another_option: Adicione outra opção
     sort_in_alphabetical_order: Classificar em ordem alfabética
     add_options_in_bulk: Adicionar opções em massa
-    use_predefined_options: Usar Opções Predefinidas
+    use_predefined_options: Use Predefined Options
     select_custom_date: Selecionar data personalizada
     select_relative_date: Selecionar data relativa
     ticked_by_default: Marcado por padrão
@@ -969,14 +980,14 @@ settings:
       expense: Expense
       payment: Payment
   customization:
-    customization: personalização
+    customization: Personalizar
     updated_message: Informações da Empresa atualizadas com sucesso
     save: Salvar
     insert_fields: Insert Fields
     learn_custom_format: Learn how to use custom format
     add_new_component: Add New Component
     component: Component
-    Parameter: Parâmetro
+    Parameter: Parameter
     series: Series
     series_description: >-
       To set a static prefix/postfix like 'INV' across your company. It supports
@@ -1025,16 +1036,16 @@ settings:
       default_formats_description: >-
         Below given formats are used to fill up the fields automatically on
         invoice creation.
-      default_invoice_email_body: Corpo Padrão de Email de Fatura
-      company_address_format: Formato de Endereço de Empresa
-      shipping_address_format: Formato de Endereço de Envio
-      billing_address_format: Formato de Endereço de Faturamento
-      invoice_email_attachment: Enviar faturas como anexos
+      default_invoice_email_body: Default Invoice Email Body
+      company_address_format: Company Address Format
+      shipping_address_format: Shipping Address Format
+      billing_address_format: Billing Address Format
+      invoice_email_attachment: Send invoices as attachments
       invoice_email_attachment_setting_description: >-
-        Ative esta opção se quiser anexar faturas no e-mail. Lembrando que
-        quando habilitado, o botão 'Ver fatura' nos e-mails não será mais
-        exibido.
-      invoice_settings_updated: Invoice Settings updated successfully
+        Enable this if you want to send invoices as email attachment. Please
+        note that 'View Invoice' button in emails will not be displayed anymore
+        when enabled.
+      invoice_settings_updated: Configuração da Fatura atualizada com sucesso
       retrospective_edits: Retrospective Edits
       allow: Allow
       disable_on_invoice_partial_paid: Disable after partial payment is recorded
@@ -1061,21 +1072,21 @@ settings:
       default_formats_description: >-
         Below given formats are used to fill up the fields automatically on
         estimate creation.
-      default_estimate_email_body: Corpo Padrão de Email de Orçamento
-      company_address_format: Formato de Endereço de Empresa
-      shipping_address_format: Formato de Endereço de Envio
-      billing_address_format: Formato de Endereço de Faturamento
-      estimate_email_attachment: Enviar orçamentos como anexos
+      default_estimate_email_body: Default Estimate Email Body
+      company_address_format: Company Address Format
+      shipping_address_format: Shipping Address Format
+      billing_address_format: Billing Address Format
+      estimate_email_attachment: Send estimates as attachments
       estimate_email_attachment_setting_description: >-
-        Ative esta opção se quiser anexar orçamentos no e-mail. Lembrando que
-        quando habilitado, o botão 'Ver orçamento' nos e-mails não será mais
-        exibido.
+        Enable this if you want to send the estimates as an email attachment.
+        Please note that 'View Estimate' button in emails will not be displayed
+        anymore when enabled.
       estimate_settings_updated: Estimate Settings updated successfully
       convert_estimate_options: Estimate Convert Action
       convert_estimate_description: >-
         Specify what happens to the estimate after it gets converted to an
         invoice.
-      no_action: Nenhuma ação
+      no_action: No action
       delete_estimate: Delete estimate
       mark_estimate_as_accepted: Mark estimate as accepted
     payments:
@@ -1089,42 +1100,42 @@ settings:
       default_formats_description: >-
         Below given formats are used to fill up the fields automatically on
         payment creation.
-      default_payment_email_body: Corpo Padrão de Email de Pagamento
-      company_address_format: Formato de Endereço de Empresa
-      from_customer_address_format: Formato de Endereço de Cliente Remetente
-      payment_email_attachment: Enviar pagamentos como anexos
+      default_payment_email_body: Default Payment Email Body
+      company_address_format: Company Address Format
+      from_customer_address_format: From Customer Address Format
+      payment_email_attachment: Send payments as attachments
       payment_email_attachment_setting_description: >-
-        Ative esta opção se quiser enviar em anexo os recibos de pagamento no
-        e-mail. Lembrando que quando habilitado, o botão 'Ver Pagamento' nos
-        e-mails não será mais exibido.
+        Enable this if you want to send the payment receipts as an email
+        attachment. Please note that 'View Payment' button in emails will not be
+        displayed anymore when enabled.
       payment_settings_updated: Payment Settings updated successfully
     items:
       title: Itens
-      units: Unidades
+      units: unidades
       add_item_unit: Adicionar unidade de item
       edit_item_unit: Editar unidade de item
       unit_name: Nome da unidade
-      item_unit_added: Unidade de Item Adicionada
-      item_unit_updated: Unidade de Item Atualizada
+      item_unit_added: Item Unit Added
+      item_unit_updated: Item Unit Updated
       item_unit_confirm_delete: Você não poderá recuperar esta unidade de item
       already_in_use: A unidade do item já está em uso
       deleted_message: Unidade de item excluída com sucesso
     notes:
-      title: Observações
+      title: Notes
       description: >-
-        Economize tempo criando notas e reutilizando-as nas suas faturas,
-        orçamentos e pagamentos.
-      notes: Notas
-      type: Tipo
-      add_note: Adicionar Nota
-      add_new_note: Adicionar Nova Nota
-      name: Nome
-      edit_note: Editar Nota
-      note_added: Nota adicionada com sucesso
-      note_updated: Nota atualizada com sucesso
-      note_confirm_delete: Você não poderá recuperar essa nota
-      already_in_use: A nota já está em uso
-      deleted_message: Nota excluída com sucesso
+        Save time by creating notes and reusing them on your invoices, estimates
+        & payments.
+      notes: Notes
+      type: Type
+      add_note: Add Note
+      add_new_note: Add New Note
+      name: Name
+      edit_note: Edit Note
+      note_added: Note added successfully
+      note_updated: Note Updated successfully
+      note_confirm_delete: You will not be able to recover this Note
+      already_in_use: Note is already in use
+      deleted_message: Note deleted successfully
       types:
         estimate: Estimate
         invoice: Invoice
@@ -1142,7 +1153,7 @@ settings:
   user_profile:
     name: Nome
     email: Email
-    password: Senha
+    password: Password
     confirm_password: Confirmar Senha
   notification:
     title: Notificação
@@ -1205,7 +1216,7 @@ settings:
     exchange_help_text: Enter exchange rate to convert from {currency} to {baseCurrency}
     currency_freak: Currency Freak
     currency_layer: Currency Layer
-    open_exchange_rate: Abrir Taxa de Câmbio
+    open_exchange_rate: Open Exchange Rate
     currency_converter: Currency Converter
     server: Server
     url: URL
@@ -1230,7 +1241,7 @@ settings:
     action: Ação
     tax_setting_description: >-
       Habilite isso se desejar adicionar Impostos a itens da Fatura
-      Individualmente. Por padrão, os impostos são adicionados diretamente à
+      Idividualmente. Por padrão, os impostos são adicionados diretamente à
       Fatura.
     created_message: Tipo de Imposto criado com sucesso
     updated_message: Tipo de Imposto Atualizado com sucesso
@@ -1271,7 +1282,7 @@ settings:
     already_in_use: A categoria já está em uso
   preferences:
     currency: Moeda
-    default_language: Idioma padrão
+    default_language: Default Language
     time_zone: Fuso Horário
     fiscal_year: Ano Financeiro
     date_format: Formato da Data
@@ -1290,7 +1301,7 @@ settings:
     updated_message: Preferências atualizadas com sucesso
     select_language: Selecione um Idioma
     select_time_zone: Selecione um fuso horário
-    select_date_format: Selecionar um Formato de Data
+    select_date_format: Select Date Format
     select_financial_year: Selecione o ano financeiro
     recurring_invoice_status: Recurring Invoice Status
     create_status: Create Status
@@ -1315,13 +1326,13 @@ settings:
   update_app:
     title: Atualizar Aplicativo
     description: >-
-      Você pode atualizar facilmente o InvoiceShelf, verifique se há novas
+      Você pode atualizar facilmente o InvoiceShelf, verifique se hà novas
       atualizações, clicando no botão abaixo
     check_update: Verifique se há atualizações
     insider_consent: Opt-in for Insider releases. Recommended for testing purposes only.
     avail_update: Nova atualização disponível
     next_version: Próxima versão
-    requirements: Requisitos
+    requirements: Requirements
     update: Atualizar agora
     update_progress: Atualização em progresso...
     progress_text: >-
@@ -1335,11 +1346,11 @@ settings:
     download_zip_file: Baixar arquivo ZIP
     unzipping_package: Descompactando o pacote
     copying_files: Copiando arquivos
-    deleting_files: Excluindo arquivos não utilizados
+    deleting_files: Deleting Unused files
     running_migrations: Executando migrações
-    finishing_update: Acabando a Atualização
+    finishing_update: Atualização de acabamento
     update_failed: Atualização falhou
-    update_failed_text: 'Desculpa! Sua atualização falhou no passo: {step}'
+    update_failed_text: 'Desculpa! Sua atualização falhou em: {step} step'
     update_warning: >-
       All of the application files and default template files will be
       overwritten when you update the application using this utility. Please
@@ -1347,98 +1358,97 @@ settings:
   backup:
     title: Backup | Backups
     description: >-
-      O backup é um arquivo zip que contém todos os arquivos nas pastas que você
-      especificou juntamente com um arquivo de backup de sua base de dados
-    new_backup: Adicionar Novo Backup
-    create_backup: Criar Backup
-    select_backup_type: Selecionar Tipo de Backup
-    backup_confirm_delete: Você não poderá recuperar este backup
-    path: caminho
-    new_disk: Novo disco
-    created_at: criado em
-    size: tamanho
+      The backup is a zipfile that contains all files in the directories you
+      specify along with a dump of your database
+    new_backup: Add New Backup
+    create_backup: Create Backup
+    select_backup_type: Select Backup Type
+    backup_confirm_delete: You will not be able to recover this Backup
+    path: path
+    new_disk: New Disk
+    created_at: created at
+    size: size
     dropbox: dropbox
     local: local
-    healthy: sem erros
-    amount_of_backups: quantidade de backups
-    newest_backups: backups mais recentes
-    used_storage: armazenamento utilizado
-    select_disk: Selecionar Disco
-    action: Ação
-    deleted_message: Backup excluído com sucesso
-    created_message: Backup criado com sucesso
-    invalid_disk_credentials: Credencial inválida para o disco selecionado
+    healthy: healthy
+    amount_of_backups: amount of backups
+    newest_backups: newest backups
+    used_storage: used storage
+    select_disk: Select Disk
+    action: Action
+    deleted_message: Backup deleted successfully
+    created_message: Backup created successfully
+    invalid_disk_credentials: Invalid credential of selected disk
   disk:
-    title: Disco de Arquivo | Discos de Arquivo
+    title: File Disk | File Disks
     description: >-
-      Por padrão, o InvoiceShelf usará o seu disco local para salvar os backups,
-      avatar e outros arquivos de imagem. Você pode configurar mais de um
-      drivers de disco como DigitalOcean, S3 e Dropbox de acordo com sua
-      preferência.
-    created_at: criado em
+      By default, InvoiceShelf will use your local disk for saving backups,
+      avatar and other image files. You can configure more than one disk drivers
+      like DigitalOcean, S3 and Dropbox according to your preference.
+    created_at: created at
     dropbox: dropbox
-    name: Nome
+    name: Name
     driver: Driver
-    disk_type: Tipo
-    disk_name: Nome do disco
-    new_disk: Adicionar novo disco
-    filesystem_driver: Driver de Sistema de Arquivo
-    local_driver: Driver local
-    local_root: Root local
-    public_driver: Driver Público
-    public_root: Root Público
-    public_url: URL Pública
-    public_visibility: Visibilidade Pública
-    media_driver: Driver de Mídia
-    media_root: Root de Mídia
-    aws_driver: Driver AWS
-    aws_key: Chave AWS
-    aws_secret: Senha AWS
-    aws_region: Região AWS
-    aws_bucket: Bucket AWS
-    aws_root: Root AWS
+    disk_type: Type
+    disk_name: Disk Name
+    new_disk: Add New Disk
+    filesystem_driver: Filesystem Driver
+    local_driver: local Driver
+    local_root: local Root
+    public_driver: Public Driver
+    public_root: Public Root
+    public_url: Public URL
+    public_visibility: Public Visibility
+    media_driver: Media Driver
+    media_root: Media Root
+    aws_driver: AWS Driver
+    aws_key: AWS Key
+    aws_secret: AWS Secret
+    aws_region: AWS Region
+    aws_bucket: AWS Bucket
+    aws_root: AWS Root
     s3_endpoint: S3 Endpoint
     s3_key: S3 Key
     s3_secret: S3 Secret
     s3_region: S3 Region
     s3_bucket: S3 Bucket
     s3_root: S3 Root
-    do_spaces_type: Tipo de Spaces Do
-    do_spaces_key: Chave de Spaces Do
-    do_spaces_secret: Senha de Spaces Do
-    do_spaces_region: Região de Spaces Do
-    do_spaces_bucket: Bucket de Spaces Do
-    do_spaces_endpoint: Endpoint de Spaces Do
-    do_spaces_root: Root de Spaces Do
-    dropbox_type: Tipo de Dropbox
-    dropbox_token: Token Dropbox
-    dropbox_key: Chave Dropbox
-    dropbox_secret: Senha Dropbox
-    dropbox_app: Aplicativo Dropbox
-    dropbox_root: Root Dropbox
-    default_driver: Driver Padrão
-    is_default: ESTÁ PADRÃO
-    set_default_disk: Definir Disco Padrão
+    do_spaces_type: Do Spaces type
+    do_spaces_key: Do Spaces key
+    do_spaces_secret: Do Spaces Secret
+    do_spaces_region: Do Spaces Region
+    do_spaces_bucket: Do Spaces Bucket
+    do_spaces_endpoint: Do Spaces Endpoint
+    do_spaces_root: Do Spaces Root
+    dropbox_type: Dropbox Type
+    dropbox_token: Dropbox Token
+    dropbox_key: Dropbox Key
+    dropbox_secret: Dropbox Secret
+    dropbox_app: Dropbox App
+    dropbox_root: Dropbox Root
+    default_driver: Default Driver
+    is_default: IS DEFAULT
+    set_default_disk: Set Default Disk
     set_default_disk_confirm: >-
-      Este disco será definido como padrão e todos os novos PDFs serão salvos
-      neste disco
-    success_set_default_disk: Disco definido como padrão com sucesso
-    save_pdf_to_disk: Salvar PDFs no Disco
-    disk_setting_description: ' Ative isso, se você deseja salvar uma cópia de cada PDF das Faturas, Orçamentos e Recibos de Pagamento em seu disco padrão, automaticamente. Habilitar esta opção diminuirá o tempo de carregamento ao visualizar os PDFs.'
-    select_disk: Selecionar Disco
-    disk_settings: Configurações de Disco
+      This disk will be set as default and all the new PDFs will be saved on
+      this disk
+    success_set_default_disk: Disk set as default successfully
+    save_pdf_to_disk: Save PDFs to Disk
+    disk_setting_description: ' Enable this, if you wish to save a copy of each Invoice, Estimate & Payment Receipt PDF on your default disk automatically. Turning this option will decrease the load-time when viewing the PDFs.'
+    select_disk: Select Disk
+    disk_settings: Disk Settings
     confirm_delete: >-
-      Seus arquivos e pastas existentes no disco especificado não serão
-      afetados, mas sua configuração de disco será excluída do InvoiceShelf
-    action: Ação
-    edit_file_disk: Editar Disco de Arquivos
-    success_create: Disco adicionado com sucesso
-    success_update: Disco atualizado com sucesso
-    error: Falha na adição de disco
-    deleted_message: Disco de arquivo excluído com sucesso
-    disk_variables_save_successfully: Disco configurado com sucesso
-    disk_variables_save_error: Configuração do disco falhou.
-    invalid_disk_credentials: Credencial inválida para o disco selecionado
+      Your existing files & folders in the specified disk will not be affected
+      but your disk configuration will be deleted from InvoiceShelf
+    action: Action
+    edit_file_disk: Edit File Disk
+    success_create: Disk added successfully
+    success_update: Disk updated successfully
+    error: Disk addition failed
+    deleted_message: File Disk deleted successfully
+    disk_variables_save_successfully: Disk Configured Successfully
+    disk_variables_save_error: Disk configuration failed.
+    invalid_disk_credentials: Invalid credential of selected disk
   taxations:
     add_billing_address: Enter Billing Address
     add_shipping_address: Enter Shipping Address
@@ -1467,11 +1477,11 @@ wizard:
     mais tarde na página de configurações.
   company_name: Nome da Empresa
   company_logo: Logotipo da Empresa
-  logo_preview: Pré-visualizar Logotipo
+  logo_preview: Previsualizar Logotipo
   preferences: Preferências
   preferences_desc: Preferências padrão para o sistema.
-  currency_set_alert: A moeda da empresa não poderá ser alterada posteriormente.
-  country: País
+  currency_set_alert: The company's currency cannot be changed later.
+  country: Pais
   state: Estado
   city: Cidade
   address: Endereço
@@ -1499,10 +1509,10 @@ wizard:
     port: Porta da Base de Dados
     password: Senha da Base de Dados
     app_url: URL do Aplicativo
-    app_domain: Domínio do Aplicativo
+    app_domain: App Domain
     username: Usuário da Base de Dados
     db_name: Nome da Base de Dados
-    db_path: Pasta do Banco de Dados
+    db_path: Database Path
     overwrite: Overwrite existing database and proceed
     desc: >-
       Crie um Banco de Dados no seu servidor e defina as credenciais usando o
@@ -1516,16 +1526,16 @@ wizard:
       aplicativo funcione. Se a verificação da permissão falhar, atualize as
       permissões da pasta.
   verify_domain:
-    title: Verificação de Domínio
+    title: Domain Verification
     desc: >-
-      O InvoiceShelf usa a autenticação baseada na sessão que requer verificação
-      de domínio para fins de segurança. Por favor, insira o domínio que você
-      vai acessar seu aplicativo.
-    app_domain: Domínio do Aplicativo
-    verify_now: Verificar Agora
-    success: Domínio Verificado com Sucesso.
-    failed: Falha na verificação de domínio. Digite um nome de domínio válido.
-    verify_and_continue: Verificar e Continuar
+      InvoiceShelf uses Session based authentication which requires domain
+      verification for security purposes. Please enter the domain on which you
+      will be accessing your web application.
+    app_domain: App Domain
+    verify_now: Verify Now
+    success: Domain Verify Successfully.
+    failed: Domain verification failed. Please enter valid domain name.
+    verify_and_continue: Verify And Continue
     notes:
       notes: 'Notes:'
       not_contain: App domain should not contain
@@ -1538,11 +1548,11 @@ wizard:
     host: Host do email
     port: Porta do email
     driver: Driver do email
-    secret: Senha
-    mailgun_secret: Senha do Mailgun
+    secret: Segredo
+    mailgun_secret: Segredo do Mailgun
     mailgun_domain: Domínio
     mailgun_endpoint: Endpoint do Mailgun
-    ses_secret: Senha do SES
+    ses_secret: Segredo do SES
     ses_key: Chave SES
     password: Senha do email
     username: Nome do Usuário do email
@@ -1575,19 +1585,19 @@ wizard:
     database_variables_save_successfully: Banco de dados configurado com sucesso.
 validation:
   invalid_phone: Número de telefone inválido
-  invalid_url: 'URL inválida (ex: http://www.invoiceshelf.com)'
-  invalid_domain_url: 'URL inválida (ex: invoiceshelf.com)'
+  invalid_url: 'url inválidas (ex: http://www.invoiceshelf.com)'
+  invalid_domain_url: 'Invalid url (ex: invoiceshelf.com)'
   required: Campo obrigatório
-  email_incorrect: E-mail incorreto.
-  email_already_taken: O email já está em uso.
+  email_incorrect: E-mail incorreto
+  email_already_taken: O email já foi recebido.
   email_does_not_exist: O usuário com determinado email não existe
-  item_unit_already_taken: Este nome de unidade de item já está em uso
-  payment_mode_already_taken: Este meio de pagamento já foi utilizado
+  item_unit_already_taken: This item unit name has already been taken
+  payment_mode_already_taken: This payment mode name has already been taken
   send_reset_link: Enviar link de redefinição
   not_yet: Ainda não? Envie novamente
-  password_min_length: A senha deve ter {count} caracteres
+  password_min_length: A senha deve conter {count} caracteres
   name_min_length: O nome deve ter pelo menos {count} letras.
-  prefix_min_length: Prefixo deve ter pelo menos letras {count}.
+  prefix_min_length: Prefix must have at least {count} letters.
   enter_valid_tax_rate: Insira uma taxa de imposto válida
   numbers_only: Apenas Números.
   characters_only: Apenas Caracteres.
@@ -1600,12 +1610,12 @@ validation:
   quantity_maxlength: A quantidade não deve exceder 20 dígitos.
   price_maxlength: O preço não deve ser superior a 20 dígitos.
   price_minvalue: O preço deve ser maior que 0.
-  amount_maxlength: Valor não deve ter mais de 20 dígitos.
-  amount_minvalue: O valor deve ser maior que 0.
+  amount_maxlength: Montante não deve ser superior a 20 dígitos.
+  amount_minvalue: Montante deve ser maior que zero
   discount_maxlength: Discount should not be greater than max discount
   description_maxlength: A descrição não deve ter mais que 255 caracteres.
-  subject_maxlength: O assunto não deve ter mais que 100 caracteres.
-  message_maxlength: A mensagem não deve ter mais que 255 caracteres.
+  subject_maxlength: Subject should not be greater than 100 characters.
+  message_maxlength: Message should not be greater than 255 characters.
   maximum_options_error: >-
     Máximo de {max} opções selecionadas. Primeiro remova uma opção selecionada
     para selecionar outra.
@@ -1613,8 +1623,8 @@ validation:
   address_maxlength: O endereço não deve ter mais que 255 caracteres.
   ref_number_maxlength: O número de referência não deve ter mais que 255 caracteres.
   prefix_maxlength: O prefixo não deve ter mais que 5 caracteres.
-  something_went_wrong: algo deu errado
-  number_length_minvalue: O valor deve ser maior que 0
+  something_went_wrong: something went wrong
+  number_length_minvalue: Number length should be greater than 0
   at_least_one_ability: Please select atleast one Permission.
   valid_driver_key: Please enter a valid {driver} key.
   valid_exchange_rate: Please enter a valid exchange rate.
@@ -1646,46 +1656,46 @@ errors:
   feature_not_enabled: Feature not enabled.
   request_limit_met: Api request limit exceeded.
   address_incomplete: Incomplete Address
-pdf_estimate_label: Orçamento
-pdf_estimate_number: Numero do Orçamento
-pdf_estimate_date: Data do Orçamento
-pdf_estimate_expire_date: Data de expiração
-pdf_invoice_label: Fatura
-pdf_invoice_number: Número da fatura
-pdf_invoice_date: Data da Fatura
-pdf_invoice_due_date: Data de Vencimento
-pdf_notes: Observações
-pdf_items_label: Itens
-pdf_quantity_label: Quantidade
-pdf_price_label: Preço
-pdf_discount_label: Desconto
-pdf_amount_label: Valor
+pdf_estimate_label: Estimate
+pdf_estimate_number: Estimate Number
+pdf_estimate_date: Estimate Date
+pdf_estimate_expire_date: Expiry Date
+pdf_invoice_label: Invoice
+pdf_invoice_number: Invoice Number
+pdf_invoice_date: Invoice Date
+pdf_invoice_due_date: Due date
+pdf_notes: Notes
+pdf_items_label: Items
+pdf_quantity_label: Quantity
+pdf_price_label: Price
+pdf_discount_label: Discount
+pdf_amount_label: Amount
 pdf_subtotal: Subtotal
 pdf_total: Total
-pdf_payment_label: Pagamento
-pdf_payment_receipt_label: RECIBO DE PAGAMENTO
-pdf_payment_date: Data de Pagamento
-pdf_payment_number: Número do Pagamento
-pdf_payment_mode: Forma de Pagamento
-pdf_payment_amount_received_label: Valor Recebido
-pdf_expense_report_label: RELATÓRIO DE DESPESAS
-pdf_total_expenses_label: TOTAL DESPESAS
-pdf_profit_loss_label: RELATÓRIO LUCRO & PERDA
-pdf_sales_customers_label: Relatório de vendas cliente
-pdf_sales_items_label: Relatório de venda de itens
-pdf_tax_summery_label: Relatório resumido de imposto
-pdf_income_label: RENDA
-pdf_net_profit_label: LUCRO LÍQUIDO
-pdf_customer_sales_report: 'Relatório de Vendas: Por Cliente'
-pdf_total_sales_label: VENDAS TOTAIS
-pdf_item_sales_label: 'Relatório de Vendas: Por Item'
-pdf_tax_report_label: RELATÓRIO DE IMPOSTOS
-pdf_total_tax_label: IMPOSTOS TOTAIS
-pdf_tax_types_label: Tipos de Impostos
-pdf_expenses_label: Despesas
-pdf_bill_to: Cobrar a,
-pdf_ship_to: Envie a,
-pdf_received_from: 'Remetente:'
+pdf_payment_label: Payment
+pdf_payment_receipt_label: PAYMENT RECEIPT
+pdf_payment_date: Payment Date
+pdf_payment_number: Payment Number
+pdf_payment_mode: Payment Mode
+pdf_payment_amount_received_label: Amount Received
+pdf_expense_report_label: EXPENSES REPORT
+pdf_total_expenses_label: TOTAL EXPENSE
+pdf_profit_loss_label: PROFIT & LOSS REPORT
+pdf_sales_customers_label: Sales Customer Report
+pdf_sales_items_label: Sales Item Report
+pdf_tax_summery_label: Tax Summary Report
+pdf_income_label: INCOME
+pdf_net_profit_label: NET PROFIT
+pdf_customer_sales_report: 'Sales Report: By Customer'
+pdf_total_sales_label: TOTAL SALES
+pdf_item_sales_label: 'Sales Report: By Item'
+pdf_tax_report_label: TAX REPORT
+pdf_total_tax_label: TOTAL TAX
+pdf_tax_types_label: Tax Types
+pdf_expenses_label: Expenses
+pdf_bill_to: Bill to,
+pdf_ship_to: Ship to,
+pdf_received_from: 'Received from:'
 pdf_tax_label: Tax
 pdf_tax_id: Tax-ID
 pdf_vat_id: VAT-ID

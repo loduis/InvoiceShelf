@@ -685,6 +685,8 @@
     }
   },
   "login": {
+    "title": "Simple Invoicing for Individuals Small Businesses",
+    "description": "InvoiceShelf helps you track expenses, record payments & generate beautiful invoices & estimates.",
     "email": "ईमेल",
     "password": "पासवर्ड",
     "forgot_password": "पासवर्ड भूल गए?",

@@ -678,6 +678,10 @@ expenses:
     category: Luokka | Luokat
     select_a_category: Valitse luokka
 login:
+  title: Simple Invoicing for Individuals Small Businesses
+  description: >-
+    InvoiceShelf helps you track expenses, record payments & generate beautiful
+    invoices & estimates.
   email: Sähköposti
   password: Salasana
   forgot_password: Unohditko salasanan?

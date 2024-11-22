@@ -687,6 +687,10 @@ expenses:
     category: Kategori | Kategori
     select_a_category: Pilih kategori
 login:
+  title: Simple Invoicing for Individuals Small Businesses
+  description: >-
+    InvoiceShelf helps you track expenses, record payments & generate beautiful
+    invoices & estimates.
   email: Surat Elektronik
   password: Kata Sandi
   forgot_password: Lupa Kata Sandi?

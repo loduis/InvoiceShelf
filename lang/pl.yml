@@ -686,6 +686,10 @@ expenses:
     category: Kategoria | Kategorie
     select_a_category: Wybierz kategorię
 login:
+  title: Simple Invoicing for Individuals Small Businesses
+  description: >-
+    InvoiceShelf helps you track expenses, record payments & generate beautiful
+    invoices & estimates.
   email: E-mail
   password: Hasło
   forgot_password: Nie pamiętasz hasła?

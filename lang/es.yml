@@ -679,6 +679,10 @@ expenses:
     category: Categoría | Categorias
     select_a_category: Seleccione una categoría
 login:
+  title: Facturación Simple para Individuos y Pequeñas Empresas
+  description: >-
+    InvoiceShelf te ayuda a dar seguimiento a tus gastos, registrar pagos y
+    generar hermosas facturas y presupuestos.
   email: Correo electrónico
   password: Contraseña
   forgot_password: ¿Olvidaste tu contraseña?
@@ -1536,13 +1540,13 @@ wizard:
     failed: La verificación del dominio falló. Ingrese un nombre de dominio válido.
     verify_and_continue: Verificar y continuar
     notes:
-      notes: 'Notes:'
-      not_contain: App domain should not contain
-      or: or
-      in_front: in front of the domain.
+      notes: 'Notas:'
+      not_contain: El dominio de la aplicación no debe contener
+      or: o
+      in_front: al frente del dominio.
       if_you: >-
-        If you're accessing the website on a different port, please mention the
-        port. For example:
+        Si estás accediendo al sitio web en un puerto diferente, por favor
+        menciona el puerto. Por ejemplo:
   mail:
     host: Host de correo
     port: Puerto de correo

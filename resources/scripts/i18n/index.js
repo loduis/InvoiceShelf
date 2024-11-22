@@ -1,16 +1,18 @@
 // import { nextTick } from 'vue'
 import { createI18n } from 'vue-i18n'
 import Ls from '@/scripts/services/ls.js'
+import { merge } from 'lodash';
 
 const SUPPORTED_LOCALES = [
   'cs',
   'en',
   'fr',
   'es',
+  'es-CO',
   'ar',
   'de',
   'ja',
-  'pt-br',
+  'pt-BR',
   'it',
   'sr',
   'nl',
@@ -36,7 +38,7 @@ async function load(locale) {
 }
 
 export function includes(locale) {
-  return SUPPORTED_LOCALES.includes(locale.toLowerCase());
+  return SUPPORTED_LOCALES.includes(locale);
 }
 
 const i18n = createI18n({
@@ -57,7 +59,14 @@ export { t, tc, tm, locale };
 export async function loadLocale(lang, keep = false) {
   lang = lang || 'en'
   if (includes(lang) && !LOADED[lang]) {
-    setLocaleMessage(lang, await load(lang))
+    let messages = await load(lang);
+    if (messages.$extends && lang.includes('-')) {
+      const [root,] = lang.split('-');
+      if (includes(root)) {
+        messages = merge(await load(root), messages);
+      }
+    }
+    setLocaleMessage(lang, messages)
     LOADED[lang] = true
   }
   locale.value = lang
