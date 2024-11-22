@@ -17,6 +17,9 @@
         ],
         "baseUrl": ".",
         "paths": {
+            "@api/": [
+                "resources/api/*"
+            ],
             "@/*": [
                 "resources/*"
             ]
