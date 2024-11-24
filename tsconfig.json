@@ -1,31 +1,23 @@
 {
-    "compilerOptions": {
-        "target": "esnext",
-        "module": "esnext",
-        "moduleResolution": "node",
-        "strict": true,
-        "jsx": "preserve",
-        "sourceMap": true,
-        "resolveJsonModule": true,
-        "esModuleInterop": true,
-        "lib": [
-            "esnext",
-            "dom"
-        ],
-        "types": [
-            "vite/client"
-        ],
-        "baseUrl": ".",
-        "paths": {
-            "@api/": [
-                "resources/api/*"
-            ],
-            "@/*": [
-                "resources/*"
-            ]
-        }
-    },
-    "include": [
-        "resources/**/*"
-    ]
+  "compilerOptions": {
+    "target": "esnext",
+    "module": "esnext",
+    "moduleResolution": "node",
+    "strict": true,
+    "jsx": "preserve",
+    "sourceMap": true,
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "allowJs": true,
+    "lib": ["esnext", "dom"],
+    "types": ["vite/client"],
+    "baseUrl": ".",
+    "paths": {
+      "Admin/*": ["./resources/scripts/admin/*"],
+      "Customer/*": ["./resources/scripts/admin/*"],
+      "Services/*": ["./resources/scripts/services/*"],
+      "@/*": ["resources/*"]
+    }
+  },
+  "include": ["resources/**/*"]
 }
